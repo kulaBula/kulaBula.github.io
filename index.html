@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>My first MDL website</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="./material.min.js"></script> 
+</head>
+<style>
+    .container {
+        height: 2000px;
+    }
+    .containerGridMax {
+        max-width: 800px;
+    }
+    .contentPading {
+        padding: 20px;
+    }
+    .layoutContainer {
+        background: url(images/mountainBackgroundDarker.jpg);
+    }
+    .textColorWhite {
+        color: white;
+    }
+    .itemCenterAligment {
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout layoutContainer textColorWhite">
+        <header class="mdl-layout__header mdl-layout__header--waterfall mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+            <!-- ten header row pozostaje pusty, ponieważ w górnym jest tylko drawer-->
+            <span class="mdl-layout-title">This is my first MDL website</span>
+            <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation textColorWhite">
+                    <a class="mdl-navigation__link textColorWhite" href="index.html">Home</a>
+                </nav>
+            </div>
+            <div class="mdl-layout__header-row ">
+                    <div class="mdl-layout-spacer"></div>
+                    <nav class="mdl-navigation textColorWhite">
+                        <a class="mdl-navigation__link textColorWhite" href="#">Contact</a>
+                        <a class="mdl-navigation__link textColorWhite" href="#">Social Media</a>
+                    </nav>
+                </div>
+        </header>
+
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Pick your site:</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="programowanie.html">Programming</a>
+                <a class="mdl-navigation__link" href="#">School</a>
+                <a class="mdl-navigation__link" href="#">Free time</a>
+                <a class="mdl-navigation__link" href="#">Contact</a>
+            </nav>
+        </div>
+
+        <main class="mdl-layout__content container">
+            <div class="mdl-grid containerGridMax">
+                <div class="mdl-cell mdl-cell--4-col-desktop contentPading">
+                    <h1>Lorem</h1>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo delectus culpa id, possimus facilis, vel exercitationem, voluptate in laborum cum commodi. Possimus voluptate illum iusto, laudantium ad ipsum beatae eos.
+                    Ratione necessitatibus itaque facilis tenetur libero ut obcaecati quaerat non, qui aperiam deserunt rerum? Dolorem voluptatibus distinctio iusto minus adipisci vero saepe aliquid. Blanditiis consectetur, inventore voluptatum iure nihil fuga!
+                    Laudantium inventore libero ullam, tenetur quisquam eligendi modi molestiae ratione necessitatibus sapiente dolores labore ad rem, harum minima maxime expedita, cupiditate maiores explicabo obcaecati voluptatem? Similique adipisci error velit assumenda!
+                    Architecto eum totam eaque eligendi unde exercitationem? Porro sunt et natus earum suscipit dolore, fugiat cumque ipsam delectus est laudantium maxime neque accusamus voluptatibus distinctio sapiente quos, blanditiis minus culpa!
+                    Ducimus aspernatur modi, assumenda libero id molestiae unde numquam blanditiis nihil praesentium error rem recusandae sequi dignissimos quia officiis amet, adipisci minus ex dolorum at? Maiores eius dolore ab adipisci.
+                    Cupiditate blanditiis animi doloribus ut, nihil enim autem dolor atque laborum ipsa. Molestias accusamus fugit aperiam eaque, maiores non provident esse voluptate ipsum vel assumenda, sed, explicabo totam suscipit fuga.
+                    Odio adipisci exercitationem ab delectus placeat facere tempora itaque quam rem quasi cum illo commodi assumenda incidunt nisi accusamus, autem, animi sit deleniti quos? Libero earum fugiat perspiciatis facilis explicabo!
+                    Alias est dignissimos reiciendis amet inventore, debitis id maxime aspernatur, doloremque voluptates corrupti perferendis labore? Excepturi tempora ad accusamus, voluptates, corrupti harum tempore, numquam at quibusdam nobis nemo voluptatem obcaecati.
+                    Enim ullam numquam deserunt consequuntur ratione sequi beatae quibusdam voluptate accusamus aliquam animi sit dolore quod assumenda deleniti, mollitia consequatur. Labore molestias explicabo veniam in est. Alias commodi aperiam sit.
+                    Quos numquam ducimus nostrum dolore reprehenderit! Molestiae quae alias neque sint, minus labore ad quidem modi dicta. Quos repellat similique corrupti, optio quam dolor voluptatem laudantium voluptatum ipsum et facere?</div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col-desktop contentPading">
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo delectus culpa id, possimus facilis, vel exercitationem, voluptate in laborum cum commodi. Possimus voluptate illum iusto, laudantium ad ipsum beatae eos.
+                    Ratione necessitatibus itaque facilis tenetur libero ut obcaecati quaerat non, qui aperiam deserunt rerum? Dolorem voluptatibus distinctio iusto minus adipisci vero saepe aliquid. Blanditiis consectetur, inventore voluptatum iure nihil fuga!
+                    Laudantium inventore libero ullam, tenetur quisquam eligendi modi molestiae ratione necessitatibus sapiente dolores labore ad rem, harum minima maxime expedita, cupiditate maiores explicabo obcaecati voluptatem? Similique adipisci error velit assumenda!
+                    Architecto eum totam eaque eligendi unde exercitationem? Porro sunt et natus earum suscipit dolore, fugiat cumque ipsam delectus est laudantium maxime neque accusamus voluptatibus distinctio sapiente quos, blanditiis minus culpa!
+                    Ducimus aspernatur modi, assumenda libero id molestiae unde numquam blanditiis nihil praesentium error rem recusandae sequi dignissimos quia officiis amet, adipisci minus ex dolorum at? Maiores eius dolore ab adipisci.
+                    Cupiditate blanditiis animi doloribus ut, nihil enim autem dolor atque laborum ipsa. Molestias accusamus fugit aperiam eaque, maiores non provident esse voluptate ipsum vel assumenda, sed, explicabo totam suscipit fuga.
+                    Odio adipisci exercitationem ab delectus placeat facere tempora itaque quam rem quasi cum illo commodi assumenda incidunt nisi accusamus, autem, animi sit deleniti quos? Libero earum fugiat perspiciatis facilis explicabo!
+                    Alias est dignissimos reiciendis amet inventore, debitis id maxime aspernatur, doloremque voluptates corrupti perferendis labore? Excepturi tempora ad accusamus, voluptates, corrupti harum tempore, numquam at quibusdam nobis nemo voluptatem obcaecati.
+                    Enim ullam numquam deserunt consequuntur ratione sequi beatae quibusdam voluptate accusamus aliquam animi sit dolore quod assumenda deleniti, mollitia consequatur. Labore molestias explicabo veniam in est. Alias commodi aperiam sit.
+                    Quos numquam ducimus nostrum dolore reprehenderit! Molestiae quae alias neque sint, minus labore ad quidem modi dicta. Quos repellat similique corrupti, optio quam dolor voluptatem laudantium voluptatum ipsum et facere?</div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col-desktop contentPading">
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo delectus culpa id, possimus facilis, vel exercitationem, voluptate in laborum cum commodi. Possimus voluptate illum iusto, laudantium ad ipsum beatae eos.
+                    Ratione necessitatibus itaque facilis tenetur libero ut obcaecati quaerat non, qui aperiam deserunt rerum? Dolorem voluptatibus distinctio iusto minus adipisci vero saepe aliquid. Blanditiis consectetur, inventore voluptatum iure nihil fuga!
+                    Laudantium inventore libero ullam, tenetur quisquam eligendi modi molestiae ratione necessitatibus sapiente dolores labore ad rem, harum minima maxime expedita, cupiditate maiores explicabo obcaecati voluptatem? Similique adipisci error velit assumenda!
+                    Architecto eum totam eaque eligendi unde exercitationem? Porro sunt et natus earum suscipit dolore, fugiat cumque ipsam delectus est laudantium maxime neque accusamus voluptatibus distinctio sapiente quos, blanditiis minus culpa!
+                    Ducimus aspernatur modi, assumenda libero id molestiae unde numquam blanditiis nihil praesentium error rem recusandae sequi dignissimos quia officiis amet, adipisci minus ex dolorum at? Maiores eius dolore ab adipisci.
+                    Cupiditate blanditiis animi doloribus ut, nihil enim autem dolor atque laborum ipsa. Molestias accusamus fugit aperiam eaque, maiores non provident esse voluptate ipsum vel assumenda, sed, explicabo totam suscipit fuga.
+                    Odio adipisci exercitationem ab delectus placeat facere tempora itaque quam rem quasi cum illo commodi assumenda incidunt nisi accusamus, autem, animi sit deleniti quos? Libero earum fugiat perspiciatis facilis explicabo!
+                    Alias est dignissimos reiciendis amet inventore, debitis id maxime aspernatur, doloremque voluptates corrupti perferendis labore? Excepturi tempora ad accusamus, voluptates, corrupti harum tempore, numquam at quibusdam nobis nemo voluptatem obcaecati.
+                    Enim ullam numquam deserunt consequuntur ratione sequi beatae quibusdam voluptate accusamus aliquam animi sit dolore quod assumenda deleniti, mollitia consequatur. Labore molestias explicabo veniam in est. Alias commodi aperiam sit.
+                    Quos numquam ducimus nostrum dolore reprehenderit! Molestiae quae alias neque sint, minus labore ad quidem modi dicta. Quos repellat similique corrupti, optio quam dolor voluptatem laudantium voluptatum ipsum et facere?</div>
+                </div>
+            </div>
+            <div class="mdl-grid containerGridMax itemCenterAligment">
+                <div class="mdl-cell mdl-cell--6-col">
+                    <div class=" mdl-card mdl-shadow--4dp welcome-card">
+                        <div class="mdl-card__title"> 
+                            <h2 class="mdl-card__title-text">Programming</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Checkout my programming stuff and project! You will find there some HTML, CSS, Java Script, Material Design Lite and C++!
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border"> 
+                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" onclick="document.location='programowanie.html'">Go there!</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col">
+                     <div class=" mdl-card mdl-shadow--4dp welcome-card">
+                    <div class="mdl-card__title"> 
+                        <h2 class="mdl-card__title-text">School</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris sagittis pellentesque lacus eleifend lacinia...
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border"> 
+                        <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect">Click Here</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <footer class="mdl-mega-footer">
+                <!-- top section-->
+                <div class="mdl-mega-footer--top-section">
+                    <div class="mdl-mega-footer--left-section">
+                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteInstagram()"><i class="material-icons">mood</i></button>
+                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteFacebook()"><i class="material-icons">facebook</i></button>
+                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteFacebook()"><i class="material-icons">account_box</i></button>
+                    </div>
+                    <div class="mdl-mega-footer--right-section">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                    </div>
+                    
+                </div>
+                <!-- middle section-->
+                <div class="mdl-mega-footer--middle-section">
+                    <div class="mdl-mega-footer--drop-down-section">
+                        <h1 class="mdl-mega-footer--heading">Programowanie</h1>
+                        <ul class="mdl-mega-footer--link-list">
+                            <li><a href="programowanie.html#panelActive">HTML</a></li>
+                            <li><a href="programowanie.html#panelCSS">CSS</a></li>
+                            <li><a href="programowanie.html#panelJS">JavaScript</a></li>
+                            <li><a href="programowanie.html#panelC">C++</a></li>
+                        </ul>
+                    </div>
+                    <div class="mdl-mega-footer--drop-down-section">
+                        <h1 class="mdl-mega-footer--heading">Przydatne narzędzia</h1>
+                        <ul class="mdl-mega-footer--link-list">
+                            <li><a href="programy.html">Programy</a></li>
+                            <li><a href="#">Strony www</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- bottom section-->
+                <div class="mdl-mega-footer--bottom-section">
+                    <div class="mdl-logo">More information</div>
+                    <ul class="mdl-mega-footer--link-list">
+                        <li><a href="#">Privacy terms</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script> 
+    function openWebsiteFacebook () {
+        window.open('https://pl-pl.facebook.com/');
+    }
+    function openWebsiteInstagram () {
+        window.open('https://www.instagram.com/kula_bula3000/');
+    }
+    
+    </script>
+</body>
+</html>
