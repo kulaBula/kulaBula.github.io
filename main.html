@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>My first MDL website</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="./material.min.js"></script> 
+</head>
+<style>
+    .container {
+        height: 2000px;
+    }
+    .containerGridMax {
+        max-width: 800px;
+    }
+    .contentPading {
+        padding: 20px;
+    }
+    .emptyPadding {
+        padding-bottom: 5px;
+    }
+    .contentMargin {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .layoutContainerGeneral {
+        background-color: white;
+    }
+    .textColorWhite {
+        color: white;
+    }
+    .itemCenterAligment {
+        align-items: center;
+    }
+    .textAligmentCenter {
+        text-align: center;
+    }
+    .backgraundForNewMain {
+        background: url(images/mountainBackgroundDarker.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+    }
+    .positionRelative {
+        position: relative;
+    }
+    .TransparentBackgroundForNewMain {
+        width: 100%;
+        height: 600px;
+    }
+    .backgroundColorForNewMain {
+        background-color: white;
+        width: 100%;
+        height: 600px;
+    }
+    .specialClass {
+        height: 24px;
+        width: 100%;
+    }
+</style>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout layoutContainerGeneral">
+        <header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--transparent ">
+            <div class="mdl-layout__header-row mdl-shadow--8dp">
+            <!-- ten header row pozostaje pusty, ponieważ w górnym jest tylko drawer-->
+            <span class="mdl-layout-title">This is my first MDL website</span>
+            <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation textColorWhite ">
+                    <a class="mdl-navigation__link textColorWhite" href="index.html">Home</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Pick your site:</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html">Home</a>
+                <a class="mdl-navigation__link" href="programowanie.html">Programming</a>
+                <a class="mdl-navigation__link" href="#">School</a>
+                <a class="mdl-navigation__link" href="#">Free time</a>
+                <a class="mdl-navigation__link" href="#">Contact</a>
+            </nav>
+        </div>
+
+        <main class="mdl-layout__content container">
+            <div class="backgraundForNewMain mdl-shadow--8dp"></div>
+            <div class="backgroundColorForNewMain mdl-shadow--8dp itemCenterAligment textAligmentCenter">
+                <div class="specialClass"></div>
+                <h1>Haloooooooooooooooooo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="mdl-grid containerGridMax itemCenterAligment contentMargin">
+                <div class="mdl-cell mdl-cell--6-col">
+                    <div class=" mdl-card mdl-shadow--4dp welcome-card">
+                        <div class="mdl-card__title"> 
+                            <h2 class="mdl-card__title-text">Programming</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Checkout my programming stuff and project! You will find there some HTML, CSS, Java Script, Material Design Lite and C++!
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border"> 
+                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" onclick="document.location='programowanie.html'">Go there!</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col">
+                     <div class=" mdl-card mdl-shadow--4dp welcome-card">
+                    <div class="mdl-card__title"> 
+                        <h2 class="mdl-card__title-text">School</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border"> 
+                        <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect">Click Here</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <footer class="mdl-mega-footer">
+                <!-- top section-->
+                <div class="mdl-mega-footer--top-section">
+                    <div class="mdl-mega-footer--left-section">
+                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteInstagram()"><i class="material-icons">camera_alt</i></button>
+                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteFacebook()"><i class="material-icons">facebook</i></button>
+                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteGitHub()"><i class="material-icons">engineering</i></button>
+                    </div>
+                    <div class="mdl-mega-footer--right-section">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                    </div>
+                    
+                </div>
+                <!-- middle section-->
+                <div class="mdl-mega-footer--middle-section">
+                    <div class="mdl-mega-footer--drop-down-section">
+                        <h1 class="mdl-mega-footer--heading">Programowanie</h1>
+                        <ul class="mdl-mega-footer--link-list">
+                            <li><a href="programowanie.html#panelActive">HTML</a></li>
+                            <li><a href="programowanie.html#panelCSS">CSS</a></li>
+                            <li><a href="programowanie.html#panelJS">JavaScript</a></li>
+                            <li><a href="programowanie.html#panelC">C++</a></li>
+                        </ul>
+                    </div>
+                    <div class="mdl-mega-footer--drop-down-section">
+                        <h1 class="mdl-mega-footer--heading">Przydatne narzędzia</h1>
+                        <ul class="mdl-mega-footer--link-list">
+                            <li><a href="programy.html">Programy</a></li>
+                            <li><a href="#">Strony www</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- bottom section-->
+                <div class="mdl-mega-footer--bottom-section">
+                    <div class="mdl-logo">More information</div>
+                    <ul class="mdl-mega-footer--link-list">
+                        <li><a href="#">Privacy terms</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script> 
+    function openWebsiteFacebook () {
+        window.open('https://pl-pl.facebook.com/');
+    }
+    function openWebsiteInstagram () {
+        window.open('https://www.instagram.com/kula_bula3000/');
+    }
+    function openWebsiteGitHub () {
+        window.open('https://github.com/kulaBula?tab=repositories');
+    }
+    </script>
+</body>
+</html>

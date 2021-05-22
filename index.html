@@ -17,6 +17,9 @@
     .contentPading {
         padding: 20px;
     }
+    .contentMarginSmall {
+        margin: 10px;
+    }
     .layoutContainer {
         background: url(images/mountainBackgroundDarker.jpg);
     }
@@ -25,6 +28,34 @@
     }
     .itemCenterAligment {
         align-items: center;
+    }
+    .textAligmentCenter {
+        text-align: center;
+    }
+    .specialClass {
+        height: 24px;
+        width: 100%;
+    }
+    .backgroundColorForNewMain {
+        background-color: white;
+        width: 100%;
+        height: 400px;
+        color:  black;
+    }
+    .buttonForSwitchingHomePages {
+        width: 100%;
+        margin: 20px;
+        position: absolute;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        justify-content: center;
+    }
+    .contentForButtonForSwitchingHomePages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
     }
 </style>
 <body>
@@ -36,6 +67,13 @@
             <div class="mdl-layout-spacer"></div>
                 <nav class="mdl-navigation textColorWhite">
                     <a class="mdl-navigation__link textColorWhite" href="index.html">Home</a>
+                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab  mdl-js-ripple-effect contentMarginSmall" onclick="darkMode()" id="buttonDarkMode"> 
+                        <i class="material-icons">dark_mode</i> 
+                    </button>
+                    <div class="mdl-tooltip" for="buttonDarkMode">Dark Mode</div>
+                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab  mdl-js-ripple-effect contentMarginSmall" onclick="lightMode()"> 
+                        <i class="material-icons">light_mode</i> 
+                    </button>
                 </nav>
             </div>
             <div class="mdl-layout__header-row ">
@@ -47,63 +85,69 @@
                 </div>
         </header>
 
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Pick your site:</span>
+        <div class="mdl-layout__drawer" id="layoutDrawerBackground">
+            <span class="mdl-layout-title" id="layoutDrawerTextTitle">Pick your site:</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="programowanie.html">Programming</a>
-                <a class="mdl-navigation__link" href="#">School</a>
-                <a class="mdl-navigation__link" href="#">Free time</a>
-                <a class="mdl-navigation__link" href="#">Contact</a>
+                <a class="mdl-navigation__link" href="index.html" id="layoutDrawerText1">Home</a>
+                <a class="mdl-navigation__link" href="programowanie.html" id="layoutDrawerText2">Programming</a>
+                <a class="mdl-navigation__link" href="#" id="layoutDrawerText3">School</a>
+                <a class="mdl-navigation__link" href="#" id="layoutDrawerText4">Free time</a>
+                <a class="mdl-navigation__link" href="#" id="layoutDrawerText5">Contact</a>
             </nav>
         </div>
 
-        <main class="mdl-layout__content container">
+        <main class="mdl-layout__content container" id="mainLayout">
             <div class="mdl-grid containerGridMax">
-                <div class="mdl-cell mdl-cell--4-col-desktop contentPading">
-                    <h1>Lorem</h1>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo delectus culpa id, possimus facilis, vel exercitationem, voluptate in laborum cum commodi. Possimus voluptate illum iusto, laudantium ad ipsum beatae eos.
-                    Ratione necessitatibus itaque facilis tenetur libero ut obcaecati quaerat non, qui aperiam deserunt rerum? Dolorem voluptatibus distinctio iusto minus adipisci vero saepe aliquid. Blanditiis consectetur, inventore voluptatum iure nihil fuga!
-                    Laudantium inventore libero ullam, tenetur quisquam eligendi modi molestiae ratione necessitatibus sapiente dolores labore ad rem, harum minima maxime expedita, cupiditate maiores explicabo obcaecati voluptatem? Similique adipisci error velit assumenda!
-                    Architecto eum totam eaque eligendi unde exercitationem? Porro sunt et natus earum suscipit dolore, fugiat cumque ipsam delectus est laudantium maxime neque accusamus voluptatibus distinctio sapiente quos, blanditiis minus culpa!
-                    Ducimus aspernatur modi, assumenda libero id molestiae unde numquam blanditiis nihil praesentium error rem recusandae sequi dignissimos quia officiis amet, adipisci minus ex dolorum at? Maiores eius dolore ab adipisci.
-                    Cupiditate blanditiis animi doloribus ut, nihil enim autem dolor atque laborum ipsa. Molestias accusamus fugit aperiam eaque, maiores non provident esse voluptate ipsum vel assumenda, sed, explicabo totam suscipit fuga.
-                    Odio adipisci exercitationem ab delectus placeat facere tempora itaque quam rem quasi cum illo commodi assumenda incidunt nisi accusamus, autem, animi sit deleniti quos? Libero earum fugiat perspiciatis facilis explicabo!
-                    Alias est dignissimos reiciendis amet inventore, debitis id maxime aspernatur, doloremque voluptates corrupti perferendis labore? Excepturi tempora ad accusamus, voluptates, corrupti harum tempore, numquam at quibusdam nobis nemo voluptatem obcaecati.
-                    Enim ullam numquam deserunt consequuntur ratione sequi beatae quibusdam voluptate accusamus aliquam animi sit dolore quod assumenda deleniti, mollitia consequatur. Labore molestias explicabo veniam in est. Alias commodi aperiam sit.
-                    Quos numquam ducimus nostrum dolore reprehenderit! Molestiae quae alias neque sint, minus labore ad quidem modi dicta. Quos repellat similique corrupti, optio quam dolor voluptatem laudantium voluptatum ipsum et facere?</div>
+                <h1>Lorem</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eaque facere esse saepe, assumenda voluptas sit rem quidem dolorem maxime illo nesciunt veniam consequatur accusamus magnam tempore, unde expedita delectus?
+                Vitae aliquid reiciendis tenetur et tempora cum eligendi, fugiat velit a, quis odit nisi neque nihil ea. Aspernatur neque sequi cumque enim rerum perspiciatis dolorum a iure soluta mollitia? Fugiat?
+                Est sapiente ratione molestias ex fuga aliquid ipsam placeat obcaecati qui minima sit voluptates saepe tempore cupiditate molestiae aspernatur, deleniti nobis dolores enim cum. Doloremque dolore distinctio tempore dolores! Assumenda.
+                Iusto dolor non dolorem, libero sit minus vitae sequi deleniti, voluptatem, nostrum accusantium soluta odit illum quibusdam? Praesentium delectus odio voluptatibus recusandae dolorem quia, amet impedit, consequatur, magni repellat voluptatum.
+                Aperiam excepturi perferendis officiis delectus eaque, similique perspiciatis soluta nisi animi ullam veniam possimus id? Aliquam quis provident assumenda incidunt fuga! Hic quasi non a ipsa praesentium, dolor minus molestiae?
+                Expedita inventore aliquid quisquam, suscipit numquam esse sapiente iusto dolor corporis illum laboriosam similique adipisci, omnis distinctio. Pariatur blanditiis eveniet corrupti iste laborum vel quas temporibus fugiat! At, recusandae asperiores?
+                Rem, accusamus fuga saepe voluptatibus labore dolor maiores obcaecati reprehenderit, aperiam mollitia, voluptatum possimus non suscipit ipsam commodi vero culpa. Aspernatur iure fuga explicabo doloremque cum dignissimos possimus obcaecati sit!
+                Amet ullam ex hic illum at, iste magni a quia ad officia vitae libero dignissimos esse quasi dolorum ratione. Quaerat eos perferendis repellendus minima quia rem non itaque nemo aspernatur.
+                Suscipit numquam tempore eligendi praesentium ullam ipsa minus, totam fugiat reiciendis eum quas atque! Pariatur, eius cupiditate! Tenetur, harum explicabo dignissimos eligendi molestiae ipsam eius laboriosam ut provident, ipsa distinctio?
+                Nemo fugit voluptas qui quas voluptatum ipsam, iusto saepe rerum velit eum vero cum praesentium consequuntur aperiam, aliquam quae obcaecati! Illum non explicabo mollitia minus tempore iste eos error quibusdam.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis deleniti nulla aperiam nam praesentium cupiditate fugiat reprehenderit quasi deserunt, quas perferendis, est qui, doloribus beatae adipisci corrupti voluptatum perspiciatis laudantium!
+                Provident enim officia distinctio mollitia molestias facilis tempore dolorem animi optio dolor laborum minus blanditiis soluta perspiciatis repellat, labore cum recusandae ipsam ab possimus itaque assumenda pariatur? Iste, illo ea?
+                Suscipit numquam repellat quia perferendis autem exercitationem. Vitae, eius neque obcaecati ipsum doloribus expedita ipsam consequatur, cumque, unde perferendis eaque aperiam! Quos, quod nihil minima temporibus dolores quasi hic dolorum.
+                Blanditiis molestias, nostrum quasi id eveniet quam excepturi alias perferendis perspiciatis a fuga. Quidem rem vel, impedit soluta quasi necessitatibus nam nemo ipsam quibusdam dolores iusto consectetur deleniti natus aut.
+                Pariatur asperiores accusamus eos nulla et consequatur natus distinctio sed earum, delectus iste alias a porro dolorem voluptatum quo esse unde tempora quod magnam. Eum ut iusto vero veritatis consectetur!
+                Ea nesciunt dolore quam facere tenetur aut quidem fuga cumque ipsam ab odio, quis doloremque fugiat saepe libero a eveniet perferendis molestias enim. Atque id voluptatum magni quia, architecto eaque.
+                Aliquid ut architecto tempora nihil perspiciatis ex, quia nulla ipsa nam veniam aliquam, autem ea, temporibus doloremque placeat perferendis repudiandae. Odit tenetur incidunt porro quos ea id rem cum doloribus!
+                Corporis aspernatur maiores consequatur aliquid est incidunt, itaque facilis odit quasi totam rerum rem eos ullam assumenda illo ipsam fugiat nam voluptatum esse. Consequatur necessitatibus ea eum, ex aspernatur assumenda.
+                Magnam assumenda culpa sit tempora facilis eaque, labore maiores. Eos, dignissimos? Itaque rem, laboriosam dolor quo architecto neque reprehenderit velit dolores cum alias incidunt voluptatem sunt, harum tempora impedit blanditiis.
+                Inventore nam autem perferendis recusandae illo, impedit blanditiis tempore quas quo facere? Sunt modi, dolore quia praesentium sapiente voluptatum error repellendus similique, ad rem corrupti fugiat eum atque culpa rerum.
+                Laboriosam sequi dicta quasi id natus quisquam nesciunt molestiae explicabo, impedit magnam quis? Recusandae laborum id earum dolor aut, perspiciatis itaque rem nam similique, quia debitis ullam natus eveniet laboriosam?
+                Dolorem velit eveniet atque natus voluptatibus nam, culpa, doloremque non enim debitis distinctio. Cum aliquam, consequuntur fugiat suscipit mollitia vitae cumque consectetur libero, repellat at deserunt, dolor sunt earum nobis.
+                Tempora ad doloremque quia debitis. At aut debitis inventore? Sequi magni enim laborum dolor deserunt. Vitae in eligendi doloremque cumque corporis aspernatur facilis nesciunt ipsum officiis optio? Id, nihil ratione.
+                Eveniet cum quos totam unde saepe assumenda illum expedita ipsum iste repudiandae, numquam labore id deserunt consequatur asperiores fugit dolore odit nobis qui accusamus. Fugit cupiditate officiis necessitatibus esse velit?
+                Reprehenderit harum esse fuga doloremque praesentium, nisi rem facere. Vitae, assumenda iste, dicta, quod ratione voluptatibus quidem soluta necessitatibus magnam nulla dignissimos impedit? Repellat laboriosam sunt possimus a, velit pariatur!
+                Molestiae quasi quibusdam at harum corrupti ea odit consequatur temporibus earum tenetur quo inventore, omnis explicabo? Debitis obcaecati, distinctio voluptas facere soluta delectus! Expedita voluptates dolore repellendus, vero sapiente ratione.
+                Unde, quidem placeat consequatur rerum pariatur porro incidunt deserunt aperiam officia blanditiis cum recusandae eum fugiat cupiditate, cumque molestiae doloribus voluptate, dicta perspiciatis repellat. Fugiat molestiae at quibusdam molestias deleniti.
+                Minus eius illo perferendis expedita consequuntur mollitia modi similique dolores inventore eligendi sequi soluta temporibus repellat alias nihil animi illum repudiandae, recusandae voluptatibus earum eos odio! Nam aperiam aut atque.
+                Repudiandae saepe iusto, consequatur eveniet, dolores, assumenda corrupti impedit natus sapiente consectetur perspiciatis nesciunt quaerat? Soluta dignissimos, repellendus sit accusantium quisquam quo velit in totam nostrum eius reiciendis autem fugiat.
+                Et quasi dolor, repellat tempora culpa placeat possimus a porro beatae, provident inventore maxime doloribus eligendi architecto magni saepe soluta dolorum corrupti magnam. Doloremque ipsa velit placeat deleniti quibusdam quis?
+            </div>
+            <div class="backgroundColorForNewMain mdl-shadow--8dp itemCenterAligment textAligmentCenter" id="specialClassBackground">
+                <div class="specialClass" id="specialClass"></div>
+                <h1 id="specialClassText1"> Chcekout the alternative home page</h1>
+                <p id="specialClassText2">Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="contentForButtonForSwitchingHomePages">
+                    <div class="buttonForSwitchingHomePages">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="openWebsiteAlternativeHomePage()">Hello</button>
                 </div>
-                <div class="mdl-cell mdl-cell--4-col-desktop contentPading">
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo delectus culpa id, possimus facilis, vel exercitationem, voluptate in laborum cum commodi. Possimus voluptate illum iusto, laudantium ad ipsum beatae eos.
-                    Ratione necessitatibus itaque facilis tenetur libero ut obcaecati quaerat non, qui aperiam deserunt rerum? Dolorem voluptatibus distinctio iusto minus adipisci vero saepe aliquid. Blanditiis consectetur, inventore voluptatum iure nihil fuga!
-                    Laudantium inventore libero ullam, tenetur quisquam eligendi modi molestiae ratione necessitatibus sapiente dolores labore ad rem, harum minima maxime expedita, cupiditate maiores explicabo obcaecati voluptatem? Similique adipisci error velit assumenda!
-                    Architecto eum totam eaque eligendi unde exercitationem? Porro sunt et natus earum suscipit dolore, fugiat cumque ipsam delectus est laudantium maxime neque accusamus voluptatibus distinctio sapiente quos, blanditiis minus culpa!
-                    Ducimus aspernatur modi, assumenda libero id molestiae unde numquam blanditiis nihil praesentium error rem recusandae sequi dignissimos quia officiis amet, adipisci minus ex dolorum at? Maiores eius dolore ab adipisci.
-                    Cupiditate blanditiis animi doloribus ut, nihil enim autem dolor atque laborum ipsa. Molestias accusamus fugit aperiam eaque, maiores non provident esse voluptate ipsum vel assumenda, sed, explicabo totam suscipit fuga.
-                    Odio adipisci exercitationem ab delectus placeat facere tempora itaque quam rem quasi cum illo commodi assumenda incidunt nisi accusamus, autem, animi sit deleniti quos? Libero earum fugiat perspiciatis facilis explicabo!
-                    Alias est dignissimos reiciendis amet inventore, debitis id maxime aspernatur, doloremque voluptates corrupti perferendis labore? Excepturi tempora ad accusamus, voluptates, corrupti harum tempore, numquam at quibusdam nobis nemo voluptatem obcaecati.
-                    Enim ullam numquam deserunt consequuntur ratione sequi beatae quibusdam voluptate accusamus aliquam animi sit dolore quod assumenda deleniti, mollitia consequatur. Labore molestias explicabo veniam in est. Alias commodi aperiam sit.
-                    Quos numquam ducimus nostrum dolore reprehenderit! Molestiae quae alias neque sint, minus labore ad quidem modi dicta. Quos repellat similique corrupti, optio quam dolor voluptatem laudantium voluptatum ipsum et facere?</div>
                 </div>
-                <div class="mdl-cell mdl-cell--4-col-desktop contentPading">
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo delectus culpa id, possimus facilis, vel exercitationem, voluptate in laborum cum commodi. Possimus voluptate illum iusto, laudantium ad ipsum beatae eos.
-                    Ratione necessitatibus itaque facilis tenetur libero ut obcaecati quaerat non, qui aperiam deserunt rerum? Dolorem voluptatibus distinctio iusto minus adipisci vero saepe aliquid. Blanditiis consectetur, inventore voluptatum iure nihil fuga!
-                    Laudantium inventore libero ullam, tenetur quisquam eligendi modi molestiae ratione necessitatibus sapiente dolores labore ad rem, harum minima maxime expedita, cupiditate maiores explicabo obcaecati voluptatem? Similique adipisci error velit assumenda!
-                    Architecto eum totam eaque eligendi unde exercitationem? Porro sunt et natus earum suscipit dolore, fugiat cumque ipsam delectus est laudantium maxime neque accusamus voluptatibus distinctio sapiente quos, blanditiis minus culpa!
-                    Ducimus aspernatur modi, assumenda libero id molestiae unde numquam blanditiis nihil praesentium error rem recusandae sequi dignissimos quia officiis amet, adipisci minus ex dolorum at? Maiores eius dolore ab adipisci.
-                    Cupiditate blanditiis animi doloribus ut, nihil enim autem dolor atque laborum ipsa. Molestias accusamus fugit aperiam eaque, maiores non provident esse voluptate ipsum vel assumenda, sed, explicabo totam suscipit fuga.
-                    Odio adipisci exercitationem ab delectus placeat facere tempora itaque quam rem quasi cum illo commodi assumenda incidunt nisi accusamus, autem, animi sit deleniti quos? Libero earum fugiat perspiciatis facilis explicabo!
-                    Alias est dignissimos reiciendis amet inventore, debitis id maxime aspernatur, doloremque voluptates corrupti perferendis labore? Excepturi tempora ad accusamus, voluptates, corrupti harum tempore, numquam at quibusdam nobis nemo voluptatem obcaecati.
-                    Enim ullam numquam deserunt consequuntur ratione sequi beatae quibusdam voluptate accusamus aliquam animi sit dolore quod assumenda deleniti, mollitia consequatur. Labore molestias explicabo veniam in est. Alias commodi aperiam sit.
-                    Quos numquam ducimus nostrum dolore reprehenderit! Molestiae quae alias neque sint, minus labore ad quidem modi dicta. Quos repellat similique corrupti, optio quam dolor voluptatem laudantium voluptatum ipsum et facere?</div>
-                </div>
+                
             </div>
             <div class="mdl-grid containerGridMax itemCenterAligment">
                 <div class="mdl-cell mdl-cell--6-col">
-                    <div class=" mdl-card mdl-shadow--4dp welcome-card">
+                    <div class=" mdl-card mdl-shadow--4dp welcome-card" id="welcomeCard1">
                         <div class="mdl-card__title"> 
-                            <h2 class="mdl-card__title-text">Programming</h2>
+                            <h2 class="mdl-card__title-text" id="welcomeCard1TextTitle">Programming</h2>
                         </div>
-                        <div class="mdl-card__supporting-text">
+                        <div class="mdl-card__supporting-text"  id="welcomeCard1text">
                             Checkout my programming stuff and project! You will find there some HTML, CSS, Java Script, Material Design Lite and C++!
                         </div>
                         <div class="mdl-card__actions mdl-card--border"> 
@@ -112,13 +156,12 @@
                     </div>
                 </div>
                 <div class="mdl-cell mdl-cell--6-col">
-                     <div class=" mdl-card mdl-shadow--4dp welcome-card">
+                     <div class=" mdl-card mdl-shadow--4dp welcome-card" id="welcomeCard2">
                     <div class="mdl-card__title"> 
-                        <h2 class="mdl-card__title-text">School</h2>
+                        <h2 class="mdl-card__title-text" id="welcomeCard2TextTitle">School</h2>
                     </div>
-                    <div class="mdl-card__supporting-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Mauris sagittis pellentesque lacus eleifend lacinia...
+                    <div class="mdl-card__supporting-text" id="welcomeCard2text">
+                        Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
                     </div>
                     <div class="mdl-card__actions mdl-card--border"> 
                         <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect">Click Here</button>
@@ -126,13 +169,14 @@
                 </div>
                 </div>
             </div>
+            
             <footer class="mdl-mega-footer">
                 <!-- top section-->
                 <div class="mdl-mega-footer--top-section">
                     <div class="mdl-mega-footer--left-section">
-                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteInstagram()"><i class="material-icons">mood</i></button>
+                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteInstagram()"><i class="material-icons">camera_alt</i></button>
                         <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteFacebook()"><i class="material-icons">facebook</i></button>
-                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteFacebook()"><i class="material-icons">account_box</i></button>
+                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteGitHub()"><i class="material-icons">engineering</i></button>
                     </div>
                     <div class="mdl-mega-footer--right-section">
                         <a href="#">Link 1</a>
@@ -177,7 +221,52 @@
     function openWebsiteInstagram () {
         window.open('https://www.instagram.com/kula_bula3000/');
     }
-    
+    function openWebsiteGitHub () {
+        window.open('https://github.com/kulaBula?tab=repositories');
+    }
+    function openWebsiteAlternativeHomePage () {
+        window.open("main.html", "_self");
+    }
+    function darkMode() {
+        document.getElementById("mainLayout").style.color = "#2b2929";  
+        document.getElementById("welcomeCard1").style.backgroundColor = "#444242";
+        document.getElementById("welcomeCard1text").style.color = "#7f7b7b";
+        document.getElementById("welcomeCard1TextTitle").style.color = "#7f7b7b";
+        document.getElementById("welcomeCard2").style.backgroundColor = "#444242";
+        document.getElementById("welcomeCard2text").style.color = "#7f7b7b";
+        document.getElementById("welcomeCard2TextTitle").style.color = "#7f7b7b";
+        document.getElementById("specialClass").style.backgroundColor = "#444242";
+        document.getElementById("specialClassBackground").style.backgroundColor = "#444242"; 
+        document.getElementById("specialClassText1").style.color = "#7f7b7b";
+        document.getElementById("specialClassText2").style.color = "#7f7b7b";
+        document.getElementById("layoutDrawerBackground").style.backgroundColor = "#444242";
+        document.getElementById("layoutDrawerText1").style.color = "#7f7b7b";
+        document.getElementById("layoutDrawerText2").style.color = "#7f7b7b";
+        document.getElementById("layoutDrawerText3").style.color = "#7f7b7b";
+        document.getElementById("layoutDrawerText4").style.color = "#7f7b7b";
+        document.getElementById("layoutDrawerText5").style.color = "#7f7b7b";
+        document.getElementById("layoutDrawerTextTitle").style.color = "#7f7b7b";
+    }
+    function lightMode() {
+        document.getElementById("mainLayout").style.color = "white";  
+        document.getElementById("welcomeCard1").style.backgroundColor = "white";
+        document.getElementById("welcomeCard1text").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("welcomeCard1TextTitle").style.color = "black";
+        document.getElementById("welcomeCard2").style.backgroundColor = "white";
+        document.getElementById("welcomeCard2text").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("welcomeCard2TextTitle").style.color = "black";
+        document.getElementById("specialClass").style.backgroundColor = "white";
+        document.getElementById("specialClassBackground").style.backgroundColor = "white"; 
+        document.getElementById("specialClassText1").style.color = "black";
+        document.getElementById("specialClassText2").style.color = "black"; 
+        document.getElementById("layoutDrawerBackground").style.backgroundColor = "white";
+        document.getElementById("layoutDrawerText1").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("layoutDrawerText2").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("layoutDrawerText3").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("layoutDrawerText4").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("layoutDrawerText5").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("layoutDrawerTextTitle").style.color = "rgba(0,0,0,.54)";
+    }
     </script>
 </body>
 </html>

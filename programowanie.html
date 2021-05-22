@@ -73,6 +73,7 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Pick your site:</span>
             <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html">Home</a>
                 <a class="mdl-navigation__link is-active" href="programowanie.html">Programming</a>
                 <a class="mdl-navigation__link" href="#">School</a>
                 <a class="mdl-navigation__link" href="#">Free time</a>
@@ -103,7 +104,7 @@
                             <h2 class="mdl-card__title-text">Introduction</h2>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
+                            
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
                             <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
@@ -463,7 +464,7 @@
                         <i class="material-icons">add</i>
                     </button>
                 </div>
-                <!-- 2. button-->
+                <!-- 3. button-->
                 <div class="mdl-cell mdl-cell--2-col-desktop contentPadingSmall contentAlignCnter">
                     <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect">
                         <i class="material-icons">mood</i>
@@ -518,6 +519,7 @@
             <!-- grid z toogle inputs-->
             <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
                 <h2 class="fullWidth ">Toogle inputs</h2>
+                <!-- chceckbox w gridzie z toogle inputs-->
                 <p class="fullWidth">Checkbox</p>
                 <div class="mdl-cell mdl-cell--3-col-desktop contentPadingLeft contentAlignCnter">
                     <label class="mdl-checkbox mdl-js-chceckbox mdl-js-ripple-effect" for="chceckbox-1">
@@ -525,6 +527,7 @@
                         <span class="mdl-checkbox__label">Checkbox</span>
                     </label>
                 </div>
+                <!--radio button w gridzie z toogle inputs-->
                 <p class="fullWidth">Radio button</p>
                 <div class="mdl-cell mdl-cell--3-col-desktop contentPadingLeft contentAlignCnter">
                     <label class="mdl-radio mdl-js-radio" for="radio1">
@@ -536,6 +539,7 @@
                         <span class="mdl-radio__label" >Option 2</span>
                     </label>
                 </div>
+                <!-- toogle switch  w gridzie z toogle inputs-->
                 <p class="fullWidth">Toogle switch</p>
                 <div class="mdl-cell mdl-cell--3-col-desktop contentPadingLeft contentAlignCnter">
                     <label class="mdl-switch mdl-js-switch" for="switch1">
@@ -543,12 +547,75 @@
                         <span class="mdl-switch__label"></span>
                     </label>
                 </div>
+                <!-- icon toogle w gridzie z toogle inpusts-->
                 <p class="fullWidth">Icon toogle</p>
                 <div class="mdl-cell mdl-cell--3-col-desktop contentPadingLeft contentAlignCnter">
                     <label class="mdl-icon-toggle mdl-js-icon-toggle" for="iconToggle1">
                         <input id="iconToggle1" type="checkbox" class="mdl-icon-toggle__input"/>
                         <span class="mdl-icon-toggle__label material-icons">mood</span>
                     </label>
+                </div>
+            </div>
+            <!-- text inputs-->
+            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
+                <h2 class="fullWidth">Text inputs</h2>
+                <div class="mdl-cell mdl-cell--6-col-desktop contentAlignCnter fullWidth">
+                    <div class="progressBar mdl-textfield mdl-js-textfield">
+                        <input id="textNormal1" class="mdl-textfield__input" type="text"/>
+                        <label class="mdl-textfield__label" for="textNormal1">Text...</label>
+                    </div>
+                </div>
+            </div>
+            <!-- text input with floating label-->
+            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
+                <div class="mdl-cell mdl-cell--6-col-desktop contentAlignCnter fullWidth">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label progressbar">
+                        <input id="textNormal2" class="mdl-textfield__input" type="text"/>
+                        <label class="mdl-textfield__label" for="textNormal2">Text...</label>
+                    </div>
+                </div>
+            </div>
+            <!-- number text input with erroe chcking -->
+            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
+                <div class="mdl-cell mdl-cell--6-col-desktop contentAlignCnter fullWidth">
+                    <div class="mdl-textfield mdl-js-textfield progressbar">
+                        <input id="textNumerical1" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"/>
+                        <label class="mdl-textfield__label" for="textNumerical1">Number...</label>
+                        <span class="mdl-textfield__error">Input is not a numbet!</span>
+                    </div>
+                </div>
+            </div>
+            <!-- numbet text input with error checking floating label-->
+            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
+                <div class="mdl-cell mdl-cell--6-col-desktop contentAlignCnter fullWidth">
+                    <div class="mdl-textfield mdl-js-textfield progressbar mdl-textfield--floating-label">
+                        <input id="textNumerical2" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"/>
+                        <label class="mdl-textfield__label" for="textNumerical2">Number...</label>
+                        <span class="mdl-textfield__error">Input is not a numer!</span>
+                    </div>
+                </div>
+            </div>
+            <!-- text input expandable-->
+            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
+                <div class="mdl-cell mdl-cell--6-col-desktop contentAlignCnter fullWidth">
+                    <div class="textAreaExpand mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <!-- dodajemy " mdl-textfield--floating-label " żeby zrobić tak, że tekst przesuwa się ponad input -->
+                        <textarea id="textArea1" class="mdl-textfield__input" type="text" rows="2"></textarea> <!-- rows ustawia ile linijek mamy na początku-->
+                        <label class="mdl-textfield__label" for="textArea1">Text...</label>
+                    </div>
+                </div>
+            </div>
+            <!-- text search box expandable-->
+            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
+                <div class="mdl-cell mdl-cell--4-col-desktop contentAlignCnter fullWidth">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield__expandable">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="expandable-1">
+                            <i class="material-icons">search</i>
+                        </label>
+                        <div class="mdl-textfield__expandable-holder"> <!-- mówi, że to holder dla diva wyżej-->
+                            <input class="mdl-textfield__input" id="expandable-1">
+                            <label class="mdl-textfield__label">Expandable input</label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -559,9 +626,9 @@
                 <!-- top section-->
                 <div class="mdl-mega-footer--top-section">
                     <div class="mdl-mega-footer--left-section">
-                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteInstagram()"><i class="material-icons">mood</i></button>
+                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteInstagram()"><i class="material-icons">camera_alt</i></button>
                         <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteFacebook()"><i class="material-icons">facebook</i></button>
-                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteFacebook()"><i class="material-icons">account_box</i></button>
+                        <button class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteGitHub()"><i class="material-icons">engineering</i></button>
                     </div>
                     <div class="mdl-mega-footer--right-section">
                         <a href="#">Link 1</a>
@@ -605,6 +672,9 @@
         }
         function openWebsiteInstagram () {
             window.open('https://www.instagram.com/kula_bula3000/');
+        }
+        function openWebsiteGitHub () {
+        window.open('https://github.com/kulaBula?tab=repositories');
         }
         document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
             this.MaterialProgress.setProgress(44);
