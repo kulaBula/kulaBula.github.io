@@ -80,18 +80,18 @@
             </div>
         </header>
 
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Pick your site:</span>
+        <div class="mdl-layout__drawer" id="layoutDrawerBackground">
+            <span class="mdl-layout-title" id="layoutDrawerTextTitle">Pick your site:</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="index.html">Home</a>
-                <a class="mdl-navigation__link" href="programowanie.html">Programming</a>
-                <a class="mdl-navigation__link" href="#">School</a>
-                <a class="mdl-navigation__link" href="#">Free time</a>
-                <a class="mdl-navigation__link" href="#">Contact</a>
+                <a class="mdl-navigation__link" href="index.html" id="layoutDrawerText1">Home</a>
+                <a class="mdl-navigation__link" href="programowanie.html" id="layoutDrawerText2">Programming</a>
+                <a class="mdl-navigation__link" href="#" id="layoutDrawerText3">School</a>
+                <a class="mdl-navigation__link" href="#" id="layoutDrawerText4">Free time</a>
+                <a class="mdl-navigation__link" href="#" id="layoutDrawerText5">Contact</a>
             </nav>
         </div>
 
-        <main class="mdl-layout__content container">
+        <main class="mdl-layout__content container" id="mainLayout">
             <div class="backgraundForNewMain mdl-shadow--8dp"></div>
             <div class="backgroundColorForNewMain mdl-shadow--8dp itemCenterAligment textAligmentCenter">
                 <div class="specialClass"></div>
@@ -100,11 +100,11 @@
             </div>
             <div class="mdl-grid containerGridMax itemCenterAligment contentMargin">
                 <div class="mdl-cell mdl-cell--6-col">
-                    <div class=" mdl-card mdl-shadow--4dp welcome-card">
+                    <div class=" mdl-card mdl-shadow--4dp welcome-card" id="welcomeCard1">
                         <div class="mdl-card__title"> 
-                            <h2 class="mdl-card__title-text">Programming</h2>
+                            <h2 class="mdl-card__title-text" id="welcomeCard1TextTitle">Programming</h2>
                         </div>
-                        <div class="mdl-card__supporting-text">
+                        <div class="mdl-card__supporting-text" id="welcomeCard1text">
                             Checkout my programming stuff and project! You will find there some HTML, CSS, Java Script, Material Design Lite and C++!
                         </div>
                         <div class="mdl-card__actions mdl-card--border"> 
@@ -113,11 +113,11 @@
                     </div>
                 </div>
                 <div class="mdl-cell mdl-cell--6-col">
-                     <div class=" mdl-card mdl-shadow--4dp welcome-card">
+                     <div class=" mdl-card mdl-shadow--4dp welcome-card"  id="welcomeCard2">
                     <div class="mdl-card__title"> 
-                        <h2 class="mdl-card__title-text">School</h2>
+                        <h2 class="mdl-card__title-text" id="welcomeCard2TextTitle">School</h2>
                     </div>
-                    <div class="mdl-card__supporting-text">
+                    <div class="mdl-card__supporting-text" id="welcomeCard2text">
                         Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
                     </div>
                     <div class="mdl-card__actions mdl-card--border"> 
@@ -179,6 +179,46 @@
     }
     function openWebsiteGitHub () {
         window.open('https://github.com/kulaBula?tab=repositories');
+    }
+    function darkMode() {
+        document.getElementById("mainLayout").style.color = "#2b2929";  
+        document.getElementById("welcomeCard1").style.backgroundColor = "#444242";
+        document.getElementById("welcomeCard1text").style.color = "#7f7b7b";
+        document.getElementById("welcomeCard1TextTitle").style.color = "#7f7b7b";
+        document.getElementById("welcomeCard2").style.backgroundColor = "#444242";
+        document.getElementById("welcomeCard2text").style.color = "#7f7b7b";
+        document.getElementById("welcomeCard2TextTitle").style.color = "#7f7b7b";
+        document.getElementById("specialClass").style.backgroundColor = "#444242";
+        document.getElementById("specialClassBackground").style.backgroundColor = "#444242"; 
+        document.getElementById("specialClassText1").style.color = "#7f7b7b";
+        document.getElementById("specialClassText2").style.color = "#7f7b7b";
+        document.getElementById("layoutDrawerBackground").style.backgroundColor = "#444242";
+        document.getElementById("layoutDrawerText1").style.color = "#7f7b7b";
+        document.getElementById("layoutDrawerText2").style.color = "#7f7b7b";
+        document.getElementById("layoutDrawerText3").style.color = "#7f7b7b";
+        document.getElementById("layoutDrawerText4").style.color = "#7f7b7b";
+        document.getElementById("layoutDrawerText5").style.color = "#7f7b7b";
+        document.getElementById("layoutDrawerTextTitle").style.color = "#7f7b7b";
+    }
+    function lightMode() {
+        document.getElementById("mainLayout").style.color = "white";  
+        document.getElementById("welcomeCard1").style.backgroundColor = "white";
+        document.getElementById("welcomeCard1text").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("welcomeCard1TextTitle").style.color = "black";
+        document.getElementById("welcomeCard2").style.backgroundColor = "white";
+        document.getElementById("welcomeCard2text").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("welcomeCard2TextTitle").style.color = "black";
+        document.getElementById("specialClass").style.backgroundColor = "white";
+        document.getElementById("specialClassBackground").style.backgroundColor = "white"; 
+        document.getElementById("specialClassText1").style.color = "black";
+        document.getElementById("specialClassText2").style.color = "black"; 
+        document.getElementById("layoutDrawerBackground").style.backgroundColor = "white";
+        document.getElementById("layoutDrawerText1").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("layoutDrawerText2").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("layoutDrawerText3").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("layoutDrawerText4").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("layoutDrawerText5").style.color = "rgba(0,0,0,.54)";
+        document.getElementById("layoutDrawerTextTitle").style.color = "rgba(0,0,0,.54)";
     }
     </script>
 </body>
