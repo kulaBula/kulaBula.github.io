@@ -24,6 +24,9 @@
         margin-top: 20px;
         margin-bottom: 20px;
     }
+    .contentMarginSmall {
+        margin: 10px;
+    }
     .layoutContainerGeneral {
         background-color: white;
     }
@@ -57,6 +60,21 @@
     .specialClass {
         height: 24px;
         width: 100%;
+    }
+    .buttonForSwitchingHomePages {
+        width: 100%;
+        margin: 20px;
+        position: absolute;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        justify-content: center;
+    }
+    .contentForButtonForSwitchingHomePages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
     }
 </style>
 <body>
@@ -95,16 +113,20 @@
             <div class="backgraundForNewMain mdl-shadow--8dp"></div>
             <div class="backgroundColorForNewMain mdl-shadow--8dp itemCenterAligment textAligmentCenter">
                 <div class="specialClass"></div>
-                <h1>Haloooooooooooooooooo</h1>
+                <h1>Chcekout the original home page</h1>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="contentForButtonForSwitchingHomePages">
+                    <div class="buttonForSwitchingHomePages">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="openWebsiteHomePage()">Show me!</button>
+                </div>
             </div>
             <div class="mdl-grid containerGridMax itemCenterAligment contentMargin">
                 <div class="mdl-cell mdl-cell--6-col">
-                    <div class=" mdl-card mdl-shadow--4dp welcome-card" id="welcomeCard1">
+                    <div class=" mdl-card mdl-shadow--4dp welcome-card">
                         <div class="mdl-card__title"> 
-                            <h2 class="mdl-card__title-text" id="welcomeCard1TextTitle">Programming</h2>
+                            <h2 class="mdl-card__title-text">Programming</h2>
                         </div>
-                        <div class="mdl-card__supporting-text" id="welcomeCard1text">
+                        <div class="mdl-card__supporting-text">
                             Checkout my programming stuff and project! You will find there some HTML, CSS, Java Script, Material Design Lite and C++!
                         </div>
                         <div class="mdl-card__actions mdl-card--border"> 
@@ -113,11 +135,11 @@
                     </div>
                 </div>
                 <div class="mdl-cell mdl-cell--6-col">
-                     <div class=" mdl-card mdl-shadow--4dp welcome-card"  id="welcomeCard2">
+                     <div class=" mdl-card mdl-shadow--4dp welcome-card">
                     <div class="mdl-card__title"> 
-                        <h2 class="mdl-card__title-text" id="welcomeCard2TextTitle">School</h2>
+                        <h2 class="mdl-card__title-text">School</h2>
                     </div>
-                    <div class="mdl-card__supporting-text" id="welcomeCard2text">
+                    <div class="mdl-card__supporting-text">
                         Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
                     </div>
                     <div class="mdl-card__actions mdl-card--border"> 
@@ -180,45 +202,8 @@
     function openWebsiteGitHub () {
         window.open('https://github.com/kulaBula?tab=repositories');
     }
-    function darkMode() {
-        document.getElementById("mainLayout").style.color = "#2b2929";  
-        document.getElementById("welcomeCard1").style.backgroundColor = "#444242";
-        document.getElementById("welcomeCard1text").style.color = "#7f7b7b";
-        document.getElementById("welcomeCard1TextTitle").style.color = "#7f7b7b";
-        document.getElementById("welcomeCard2").style.backgroundColor = "#444242";
-        document.getElementById("welcomeCard2text").style.color = "#7f7b7b";
-        document.getElementById("welcomeCard2TextTitle").style.color = "#7f7b7b";
-        document.getElementById("specialClass").style.backgroundColor = "#444242";
-        document.getElementById("specialClassBackground").style.backgroundColor = "#444242"; 
-        document.getElementById("specialClassText1").style.color = "#7f7b7b";
-        document.getElementById("specialClassText2").style.color = "#7f7b7b";
-        document.getElementById("layoutDrawerBackground").style.backgroundColor = "#444242";
-        document.getElementById("layoutDrawerText1").style.color = "#7f7b7b";
-        document.getElementById("layoutDrawerText2").style.color = "#7f7b7b";
-        document.getElementById("layoutDrawerText3").style.color = "#7f7b7b";
-        document.getElementById("layoutDrawerText4").style.color = "#7f7b7b";
-        document.getElementById("layoutDrawerText5").style.color = "#7f7b7b";
-        document.getElementById("layoutDrawerTextTitle").style.color = "#7f7b7b";
-    }
-    function lightMode() {
-        document.getElementById("mainLayout").style.color = "white";  
-        document.getElementById("welcomeCard1").style.backgroundColor = "white";
-        document.getElementById("welcomeCard1text").style.color = "rgba(0,0,0,.54)";
-        document.getElementById("welcomeCard1TextTitle").style.color = "black";
-        document.getElementById("welcomeCard2").style.backgroundColor = "white";
-        document.getElementById("welcomeCard2text").style.color = "rgba(0,0,0,.54)";
-        document.getElementById("welcomeCard2TextTitle").style.color = "black";
-        document.getElementById("specialClass").style.backgroundColor = "white";
-        document.getElementById("specialClassBackground").style.backgroundColor = "white"; 
-        document.getElementById("specialClassText1").style.color = "black";
-        document.getElementById("specialClassText2").style.color = "black"; 
-        document.getElementById("layoutDrawerBackground").style.backgroundColor = "white";
-        document.getElementById("layoutDrawerText1").style.color = "rgba(0,0,0,.54)";
-        document.getElementById("layoutDrawerText2").style.color = "rgba(0,0,0,.54)";
-        document.getElementById("layoutDrawerText3").style.color = "rgba(0,0,0,.54)";
-        document.getElementById("layoutDrawerText4").style.color = "rgba(0,0,0,.54)";
-        document.getElementById("layoutDrawerText5").style.color = "rgba(0,0,0,.54)";
-        document.getElementById("layoutDrawerTextTitle").style.color = "rgba(0,0,0,.54)";
+    function openWebsiteHomePage() {
+        window.open('index.html');
     }
     </script>
 </body>
