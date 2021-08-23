@@ -1,691 +1,1216 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
+  <head>
     <title>Programming</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./material.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="./material.min.js"></script> 
-</head>
-<style>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./material.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="./material.min.js"></script>
+  </head>
+  <style>
     .container {
-        height: 2000px;
+      height: 2000px;
     }
     .containerGridMax {
-        max-width: 800px;
+      max-width: 800px;
     }
     .contentPading {
-        padding: 20px;
+      padding: 20px;
     }
     .contentPadingSmall {
-        padding: 10px;
+      padding: 10px;
     }
     .contentPadingLeft {
-        padding-left: 20px;;
+      padding-left: 20px;
     }
     .contentOnlyDivP {
-        padding: 10px;
+      padding: 10px;
     }
     .contentContainerWidth {
-        height: 10px;
-        width: 100%;
-        text-align: center;
+      height: 10px;
+      width: 100%;
+      text-align: center;
     }
     .contentContainerWidthHeigher {
-        height: 20px;
-        width: 100%;
-        text-align: center;
+      height: 20px;
+      width: 100%;
+      text-align: center;
     }
     .contentMargin {
-        margin: 20px;
+      margin: 20px;
     }
     .contentMarginSmall {
-        margin: 10px;
+      margin: 10px;
     }
     .itemsAligmentCenterForMDLDemo {
-        align-items: center;
-        justify-items: center;
+      align-items: center;
+      justify-items: center;
     }
     .contentAlignCnter {
-        align-items: center;
-        align-content: center;
-        text-align: center;
+      align-items: center;
+      align-content: center;
+      text-align: center;
     }
     .sliderWidth {
-        width: 500px;
+      width: 500px;
     }
     .fullWidth {
-        width: 100%;
+      width: 100%;
     }
-</style>
-<body>
+  </style>
+  <body>
     <div class="mdl-layout mdl-js-layout">
-        <header class="mdl-layout__header mdl-layout__header--scroll">
-            <div class="mdl-layout__header-row">
-                <span class="mdl-layout-title">Programming</span>
-                <div class="mdl-layout-spacer"></div>
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="index.html">Home</a>
-                </nav>
-            </div>
-        </header>
-
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Pick your site:</span>
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="index.html">Home</a>
-                <a class="mdl-navigation__link is-active" href="programowanie.html">Programming</a>
-                <a class="mdl-navigation__link" href="#">School</a>
-                <a class="mdl-navigation__link" href="#">Free time</a>
-                <a class="mdl-navigation__link" href="#">Contact</a>
-            </nav>
+      <header class="mdl-layout__header mdl-layout__header--scroll programmingHeaderRow">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title mainTitleTextColor">Programming</span>
+          <div class="mdl-layout-spacer"></div>
+          <nav class="mdl-navigation">
+            <!-- <button class="mdl-button mdl-js-button mdl-js-ripple-effect>" onclick="goHome()" id="goHomeButton">
+              Home
+          </button>
+          <div class="mdl-tooltip" for="goHomeButton">Takes you home</div> -->
+          <a class="mdl-navigation__link textColorWhite" href="index.html">Home</a>
+          </nav>
         </div>
+      </header>
 
-        <main class="mdl-layout__content container">
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Pick your site:</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="index.html">Home</a>
+          <a class="mdl-navigation__link is-active" href="programowanie.html"
+            >Programming</a
+          >
+          <a class="mdl-navigation__link" href="#">School</a>
+          <a class="mdl-navigation__link" href="#">Free time</a>
+          <a class="mdl-navigation__link" href="#">Contact</a>
+        </nav>
+      </div>
+
+      <main class="mdl-layout__content container">
         <div class="mdl-tabs mdl-js-tabs">
-            <div class="mdl-tabs__tab-bar">
-                <a href="#panelActive" class="mdl-tabs__tab is-active">HTML</a>
-                <a href="#panelCSS" class="mdl-tabs__tab">CSS</a>
-                <a href="#panelJS" class="mdl-tabs__tab">JavaScript</a>
-                <a href="#panelC" class="mdl-tabs__tab">C++</a>
-                <a href="#panelMDL-Demo" class="mdl-tabs__tab">MDL-Demo</a>
+          <div class="mdl-tabs__tab-bar">
+            <a href="#panelActive" class="mdl-tabs__tab is-active">HTML</a>
+            <a href="#panelCSS" class="mdl-tabs__tab">CSS</a>
+            <a href="#panelJS" class="mdl-tabs__tab">JavaScript</a>
+            <a href="#panelC" class="mdl-tabs__tab">C++</a>
+            <a href="#panelMDL-Demo" class="mdl-tabs__tab">MDL-Demo</a>
+          </div>
+          <!-- Panel do taba html-->
+          <div id="panelActive" class="mdl-tabs__panel is-active">
+            <div class="contentOnlyDivP contentContainerWidth">
+              <p>HTML is bla bla bla some description</p>
             </div>
-            <!-- Panel do taba html-->
-            <div id="panelActive"class="mdl-tabs__panel is-active ">
-                <div class=" contentOnlyDivP contentContainerWidth ">
-                    <p>HTML is bla bla bla some description</p>
-                </div> 
             <!-- grid w panelu html-->
-            <div class="mdl-grid containerGridMax contentPading"> <!-- otwieramy grid w panelu html-->
-                <!-- 1. card do panelu html -->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Introduction</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
-                </div> 
-            <!-- zamknięcie 1. carda w panelu html-->
-            <!-- 2. card do panelu html -- -->
-            <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Basic</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect">Go there!</button>
-                    </div>
-                </div>
-            </div>  
-            <!-- zamknięcie 2. carda w panelu html-->
-            <!-- 3. card do panelu html -- -->
-            <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+            <div class="mdl-grid containerGridMax contentPading">
+              <!-- otwieramy grid w panelu html-->
+              <!-- 1. card do panelu html -->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
                 <div class="mdl-card mdl-shadow--3dp welcome-card">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">More advanced</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect">Go there!</button>
-                    </div>
-                </div> 
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Introduction</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- zamknięcie 1. carda w panelu html-->
+              <!-- 2. card do panelu html -- -->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Basic</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- zamknięcie 2. carda w panelu html-->
+              <!-- 3. card do panelu html -- -->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">More advanced</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- zamknięcie 3. carda w panleu html-->
+              <!-- 4. card w panelu html-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Advanced</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- zamknięcie 4. carda w panleu html-->
+              <!-- 5. card w panelu html-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Design</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- zamknięcie do carda 5. w panelu html-->
+              <!-- 6. card w panelu html-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Material Design</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- zamknięcie 6. carda w panelu html-->
             </div>
-            <!-- zamknięcie 3. carda w panleu html-->
-            <!-- 4. card w panelu html-->
-            <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                <div class="mdl-card mdl-shadow--3dp welcome-card">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Advanced</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                         Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect">Go there!</button>
-                    </div>
-                </div>
-            </div> 
-            <!-- zamknięcie 4. carda w panleu html-->
-            <!-- 5. card w panelu html-->
-            <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                <div class="mdl-card mdl-shadow--3dp welcome-card">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Design</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect">Go there!</button>
-                    </div>
-                </div>
-            </div>
-            <!-- zamknięcie do carda 5. w panelu html-->
-            <!-- 6. card w panelu html-->
-            <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                <div class="mdl-card mdl-shadow--3dp welcome-card">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Material Design</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect">Go there!</button>
-                    </div>
-                </div>
-            </div>
-            <!-- zamknięcie 6. carda w panelu html-->
-         </div> <!-- zamknięcie gridu-->
-        </div> <!-- zamykamy panel do html-->
-        <!-- panel do css-->
-        <div id="panelCSS" class="mdl-tabs__panel">
+            <!-- zamknięcie gridu-->
+          </div>
+          <!-- zamykamy panel do html-->
+          <!-- panel do css-->
+          <div id="panelCSS" class="mdl-tabs__panel">
             <!-- short intro-->
             <div class="contentOnlyDivP contentContainerWidth">
-                <p>CSS is bla bla bla some description</p>
+              <p>CSS is bla bla bla some description</p>
             </div>
             <!-- otwieramy grid w panelu css-->
             <div class="mdl-grid containerGridMax">
-                <!-- 1. card w panelu css-->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Basic</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              <!-- 1. card w panelu css-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Basic</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamknięcie 1. carda w panelu css-->
-                <!-- 2. card w panelu css-->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">More advanced</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              </div>
+              <!-- zamknięcie 1. carda w panelu css-->
+              <!-- 2. card w panelu css-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">More advanced</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamknięcie 2. carda w panelu css-->
-                <!-- 3. card w panelu css-->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Advanced</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              </div>
+              <!-- zamknięcie 2. carda w panelu css-->
+              <!-- 3. card w panelu css-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Advanced</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamknięcie 3. carda w panelu css -->
-                <!-- 4. card w panelu css -->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Cool tricks</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              </div>
+              <!-- zamknięcie 3. carda w panelu css -->
+              <!-- 4. card w panelu css -->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Cool tricks</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamkniecie 4. carda w panelu css-->
-            </div> <!-- zamkniecie gridu-->
-        </div>  <!-- zamknięcie panelu css-->
-        <!--panel js-->
-        <div id="panelJS" class="mdl-tabs__panel">
+              </div>
+              <!-- zamkniecie 4. carda w panelu css-->
+            </div>
+            <!-- zamkniecie gridu-->
+          </div>
+          <!-- zamknięcie panelu css-->
+          <!--panel js-->
+          <div id="panelJS" class="mdl-tabs__panel">
             <div class="contentOnlyDivP contentContainerWidth">
-                <p>Java Script is bla bla bla some description</p>
+              <p>Java Script is bla bla bla some description</p>
             </div>
             <div class="mdl-grid containerGridMax">
-                <!-- 1. card w panelu js-->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Introduction</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              <!-- 1. card w panelu js-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Introduction</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamknięcie 1. carda w paneleu js-->
-                <!-- 2. card w panelu js-->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Basic</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              </div>
+              <!-- zamknięcie 1. carda w paneleu js-->
+              <!-- 2. card w panelu js-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Basic</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamknięcie 2. carda w panelu js-->
-                <!-- 3. card w panelu js-->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Next level</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              </div>
+              <!-- zamknięcie 2. carda w panelu js-->
+              <!-- 3. card w panelu js-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Next level</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamknięcie 3. carda w panelu js-->
-                <!-- 4. card w panelu js-->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Making apps</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              </div>
+              <!-- zamknięcie 3. carda w panelu js-->
+              <!-- 4. card w panelu js-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Making apps</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamknięcie 4. carda w panelu js-->
-                <!-- 5. card w panelu js-->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Making games</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              </div>
+              <!-- zamknięcie 4. carda w panelu js-->
+              <!-- 5. card w panelu js-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Making games</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamknięcie 5. carda w panelu js-->
-            </div><!-- zamknięcie gridu w panelu js-->
-        </div>
-        <!-- panel c++ -->
-        <div id="panelC" class="mdl-tabs__panel">
+              </div>
+              <!-- zamknięcie 5. carda w panelu js-->
+            </div>
+            <!-- zamknięcie gridu w panelu js-->
+          </div>
+          <!-- panel c++ -->
+          <div id="panelC" class="mdl-tabs__panel">
             <div class="contentContainerWidth contentOnlyDivP">
-                <p>C++ is bla bla bla some description</p>
+              <p>C++ is bla bla bla some description</p>
             </div>
             <div class="mdl-grid containerGridMax">
-                <!-- 1. card w panelu c++ -->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Introduction</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              <!-- 1. card w panelu c++ -->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Introduction</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamknięcie 1. carda w panelu c++ -->
-                <!-- 2. card w panelu c++ -->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Basic</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              </div>
+              <!-- zamknięcie 1. carda w panelu c++ -->
+              <!-- 2. card w panelu c++ -->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Basic</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamknięcie 2. carda w panelu c++ -->
-                <!-- 3. card w panelu c++-->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">More advanced</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              </div>
+              <!-- zamknięcie 2. carda w panelu c++ -->
+              <!-- 3. card w panelu c++-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">More advanced</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamknięcie 3. carda w panelu c++ -->
-                <!-- 4. card w panelu c++ -->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Advanced</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              </div>
+              <!-- zamknięcie 3. carda w panelu c++ -->
+              <!-- 4. card w panelu c++ -->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Advanced</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamknięcie 4. carda w panelu c++ -->
-                <!-- 5. card w panelu c++-->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
-                    <div class="mdl-card mdl-shadow--3dp welcome-card ">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Making games</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Sorry, this page is still under construction... Please check after some time, mayby we will be ready with it
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" >Go there!</button>
-                        </div>
-                    </div>
+              </div>
+              <!-- zamknięcie 4. carda w panelu c++ -->
+              <!-- 5. card w panelu c++-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPading">
+                <div class="mdl-card mdl-shadow--3dp welcome-card">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Making games</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Sorry, this page is still under construction... Please check
+                    after some time, mayby we will be ready with it
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <button
+                      class="
+                        mdl-button mdl-js-button
+                        mdl-button--colored
+                        mdl-js-ripple-effect
+                      "
+                    >
+                      Go there!
+                    </button>
+                  </div>
                 </div>
-                <!-- zamknięcie 5. carda w panelu c++ -->
+              </div>
+              <!-- zamknięcie 5. carda w panelu c++ -->
             </div>
-        </div>
-        <div id="panelMDL-Demo" class="mdl-tabs__panel">
+          </div>
+          <div id="panelMDL-Demo" class="mdl-tabs__panel">
             <!-- napis nad wszystkim-->
-            <div class=" contentOnlyDivP contentContainerWidth ">
-                <p>Demo of some cool things with MDL</p>
-            </div> 
-            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
-                <!-- 1. cell w panelu MDL demo -->
-                <h2 class="fullWidth ">Buttons</h2>
-                <!--1. button-->
-                <div class="mdl-cell mdl-cell--2-col-desktop contentPadingSmall contentAlignCnter">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Button</button>
-                </div>
-                <!-- 2. button -->
-                <div class="mdl-cell mdl-cell--2-col-desktop contentPadingSmall contentAlignCnter">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Button</button>
-                </div> 
-                <!-- 3. button -->
-                <div class="mdl-cell mdl-cell--2-col-desktop contentPadingSmall contentAlignCnter">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">Button</button>
-                </div> 
-                <!-- 4. button -->
-                <div class="mdl-cell mdl-cell--2-col-desktop contentPadingSmall contentAlignCnter">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Button</button>
-                </div> 
-            </div><!-- koniec gridu z buttonami -->
-            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
-                <h2 class="fullWidth ">Round Buttons</h2>
-                <!-- 1. button -->
-                <div class="mdl-cell mdl-cell--2-col-desktop contentPadingSmall contentAlignCnter">
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--accent mdl-js-ripple-effect">
-                        <i class="material-icons">add</i>
-                    </button>
-                </div>
-                <!-- 2. button -->
-                <div class="mdl-cell mdl-cell--2-col-desktop contentPadingSmall contentAlignCnter">
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect">
-                        <i class="material-icons">add</i>
-                    </button>
-                </div>
-                <!-- 3. button-->
-                <div class="mdl-cell mdl-cell--2-col-desktop contentPadingSmall contentAlignCnter">
-                    <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect">
-                        <i class="material-icons">mood</i>
-                    </button>
-                </div>
+            <div class="contentOnlyDivP contentContainerWidth">
+              <p>Demo of some cool things with MDL</p>
+            </div>
+            <div
+              class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
+            >
+              <!-- 1. cell w panelu MDL demo -->
+              <h2 class="fullWidth">Buttons</h2>
+              <!--1. button-->
+              <div
+                class="
+                  mdl-cell mdl-cell--2-col-desktop
+                  contentPadingSmall
+                  contentAlignCnter
+                "
+              >
+                <button
+                  class="
+                    mdl-button mdl-js-button
+                    mdl-button--raised mdl-button--colored
+                    mdl-js-ripple-effect
+                  "
+                >
+                  Button
+                </button>
+              </div>
+              <!-- 2. button -->
+              <div
+                class="
+                  mdl-cell mdl-cell--2-col-desktop
+                  contentPadingSmall
+                  contentAlignCnter
+                "
+              >
+                <button
+                  class="
+                    mdl-button mdl-js-button
+                    mdl-button--raised mdl-button--colored
+                  "
+                >
+                  Button
+                </button>
+              </div>
+              <!-- 3. button -->
+              <div
+                class="
+                  mdl-cell mdl-cell--2-col-desktop
+                  contentPadingSmall
+                  contentAlignCnter
+                "
+              >
+                <button
+                  class="
+                    mdl-button mdl-js-button
+                    mdl-button--raised mdl-button--accent
+                    mdl-js-ripple-effect
+                  "
+                >
+                  Button
+                </button>
+              </div>
+              <!-- 4. button -->
+              <div
+                class="
+                  mdl-cell mdl-cell--2-col-desktop
+                  contentPadingSmall
+                  contentAlignCnter
+                "
+              >
+                <button
+                  class="
+                    mdl-button mdl-js-button
+                    mdl-button--raised mdl-button--accent
+                  "
+                >
+                  Button
+                </button>
+              </div>
+            </div>
+            <!-- koniec gridu z buttonami -->
+            <div
+              class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
+            >
+              <h2 class="fullWidth">Round Buttons</h2>
+              <!-- 1. button -->
+              <div
+                class="
+                  mdl-cell mdl-cell--2-col-desktop
+                  contentPadingSmall
+                  contentAlignCnter
+                "
+              >
+                <button
+                  class="
+                    mdl-button mdl-js-button
+                    mdl-button--fab mdl-button--accent
+                    mdl-js-ripple-effect
+                  "
+                >
+                  <i class="material-icons">add</i>
+                </button>
+              </div>
+              <!-- 2. button -->
+              <div
+                class="
+                  mdl-cell mdl-cell--2-col-desktop
+                  contentPadingSmall
+                  contentAlignCnter
+                "
+              >
+                <button
+                  class="
+                    mdl-button mdl-js-button
+                    mdl-button--fab mdl-button--mini-fab
+                    mdl-js-ripple-effect
+                  "
+                >
+                  <i class="material-icons">add</i>
+                </button>
+              </div>
+              <!-- 3. button-->
+              <div
+                class="
+                  mdl-cell mdl-cell--2-col-desktop
+                  contentPadingSmall
+                  contentAlignCnter
+                "
+              >
+                <button
+                  class="
+                    mdl-button mdl-js-button
+                    mdl-button--icon mdl-button--colored
+                    mdl-js-ripple-effect
+                  "
+                >
+                  <i class="material-icons">mood</i>
+                </button>
+              </div>
             </div>
             <!-- grid z badgami-->
-            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo ">
-                <!-- szybka notka, co tu jest -->
-                <h2 class="fullWidth ">Badges</h2>
-                <!-- 1. cell w sekcji badges-->
-                <div class="mdl-cell mdl-cell--6-col-desktop contentPadingSmall">
-                    <a href="#">This is a link with a badge</a>
-                    <span class="mdl-badge mdl-badge--no-background" data-badge="4"></span>
-                </div>
-                <!--<div class="mdl-cell mdl-cell--6-col-desktop contentPadingSmall">
+            <div
+              class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
+            >
+              <!-- szybka notka, co tu jest -->
+              <h2 class="fullWidth">Badges</h2>
+              <!-- 1. cell w sekcji badges-->
+              <div class="mdl-cell mdl-cell--6-col-desktop contentPadingSmall">
+                <a href="#">This is a link with a badge</a>
+                <span
+                  class="mdl-badge mdl-badge--no-background"
+                  data-badge="4"
+                ></span>
+              </div>
+              <!--<div class="mdl-cell mdl-cell--6-col-desktop contentPadingSmall">
                     <div class="mdl-badge" data-badge="4">Hello world!</div>
                 </div> -->
-            </div> <!-- koenic gridu z badgami-->
+            </div>
+            <!-- koenic gridu z badgami-->
             <!-- grid z progress barami-->
-            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
-                <h2 class="fullWidth ">Progress bars</h2>
-                <!-- 1. cell w sekcji bars-->
-                <div class="mdl-cell mdl-cell--10-col-desktop contentPading">
-                    <div id="p1"class="mdl-progress mdl-js-progress contentMarginSmall"></div>
-                </div>
-                <!-- 2. cell w sekcji bars-->
-                <div class="mdl-cell mdl-cell--10-col-desktop contentPading">
-                    <div id="p2"class="mdl-progress mdl-js-progress mdl-progress__indeterminate contentMarginSmall"></div>
-                </div>
-            </div> <!-- koniec gridu z progress barami-->
+            <div
+              class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
+            >
+              <h2 class="fullWidth">Progress bars</h2>
+              <!-- 1. cell w sekcji bars-->
+              <div class="mdl-cell mdl-cell--10-col-desktop contentPading">
+                <div
+                  id="p1"
+                  class="mdl-progress mdl-js-progress contentMarginSmall"
+                ></div>
+              </div>
+              <!-- 2. cell w sekcji bars-->
+              <div class="mdl-cell mdl-cell--10-col-desktop contentPading">
+                <div
+                  id="p2"
+                  class="
+                    mdl-progress mdl-js-progress
+                    mdl-progress__indeterminate
+                    contentMarginSmall
+                  "
+                ></div>
+              </div>
+            </div>
+            <!-- koniec gridu z progress barami-->
             <!-- grid z spinerem -->
-            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
-                <h2 class="fullWidth ">Spinners</h2>
-                    <div class="mdl-cell mdl-cell--2-col-desktop contentPading contentAlignCnter">
-                    <div class="mdl-spinner mdl-js-spinner mdl-spinner--single-color is is-active"></div>
-                </div>
-                <div class="mdl-cell mdl-cell--2-col-desktop contentPading contentAlignCnter">
-                    <div class="mdl-spinner mdl-js-spinner is is-active"></div>
-                </div>
-                
-            </div> <!-- koniec gridu z spinerami-->
+            <div
+              class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
+            >
+              <h2 class="fullWidth">Spinners</h2>
+              <div
+                class="
+                  mdl-cell mdl-cell--2-col-desktop
+                  contentPading
+                  contentAlignCnter
+                "
+              >
+                <div
+                  class="
+                    mdl-spinner mdl-js-spinner
+                    mdl-spinner--single-color
+                    is is-active
+                  "
+                ></div>
+              </div>
+              <div
+                class="
+                  mdl-cell mdl-cell--2-col-desktop
+                  contentPading
+                  contentAlignCnter
+                "
+              >
+                <div class="mdl-spinner mdl-js-spinner is is-active"></div>
+              </div>
+            </div>
+            <!-- koniec gridu z spinerami-->
             <!-- grid z spliderem -->
-            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
-                <h2 class="fullWidth ">Sliders</h2>
-                <div class="mdl-cell mdl-cell--10-col-desktop contentPading">
-                    <p class="sliderWidth">
-                        <input class="mdl-slider mdl-js-slider" type="range" min="1" max="25" value="5" step="1">
-                    </p>
-                </div>
-            </div> <!-- koniec gridu z sliderami -->
+            <div
+              class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
+            >
+              <h2 class="fullWidth">Sliders</h2>
+              <div class="mdl-cell mdl-cell--10-col-desktop contentPading">
+                <p class="sliderWidth">
+                  <input
+                    class="mdl-slider mdl-js-slider"
+                    type="range"
+                    min="1"
+                    max="25"
+                    value="5"
+                    step="1"
+                  />
+                </p>
+              </div>
+            </div>
+            <!-- koniec gridu z sliderami -->
             <!-- grid z toogle inputs-->
-            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
-                <h2 class="fullWidth ">Toogle inputs</h2>
-                <!-- chceckbox w gridzie z toogle inputs-->
-                <p class="fullWidth">Checkbox</p>
-                <div class="mdl-cell mdl-cell--3-col-desktop contentPadingLeft contentAlignCnter">
-                    <label class="mdl-checkbox mdl-js-chceckbox mdl-js-ripple-effect" for="chceckbox-1">
-                        <input id="chceckbox-1" class="mdl-checkbox__input" type="checkbox"/>
-                        <span class="mdl-checkbox__label">Checkbox</span>
-                    </label>
-                </div>
-                <!--radio button w gridzie z toogle inputs-->
-                <p class="fullWidth">Radio button</p>
-                <div class="mdl-cell mdl-cell--3-col-desktop contentPadingLeft contentAlignCnter">
-                    <label class="mdl-radio mdl-js-radio" for="radio1">
-                        <input id="radio1" class="mdl-radio__button" type="radio" name="options"/>
-                        <span class="mdl-radio__label" >Option 1</span>
-                    </label>
-                    <label class="mdl-radio mdl-js-radio" for="radio2">
-                        <input id="radio2" class="mdl-radio__button" type="radio" name="options"/>
-                        <span class="mdl-radio__label" >Option 2</span>
-                    </label>
-                </div>
-                <!-- toogle switch  w gridzie z toogle inputs-->
-                <p class="fullWidth">Toogle switch</p>
-                <div class="mdl-cell mdl-cell--3-col-desktop contentPadingLeft contentAlignCnter">
-                    <label class="mdl-switch mdl-js-switch" for="switch1">
-                        <input id="switch1" type="checkbox" class="mdl-switch__input"/>
-                        <span class="mdl-switch__label"></span>
-                    </label>
-                </div>
-                <!-- icon toogle w gridzie z toogle inpusts-->
-                <p class="fullWidth">Icon toogle</p>
-                <div class="mdl-cell mdl-cell--3-col-desktop contentPadingLeft contentAlignCnter">
-                    <label class="mdl-icon-toggle mdl-js-icon-toggle" for="iconToggle1">
-                        <input id="iconToggle1" type="checkbox" class="mdl-icon-toggle__input"/>
-                        <span class="mdl-icon-toggle__label material-icons">mood</span>
-                    </label>
-                </div>
+            <div
+              class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
+            >
+              <h2 class="fullWidth">Toogle inputs</h2>
+              <!-- chceckbox w gridzie z toogle inputs-->
+              <p class="fullWidth">Checkbox</p>
+              <div
+                class="
+                  mdl-cell mdl-cell--3-col-desktop
+                  contentPadingLeft
+                  contentAlignCnter
+                "
+              >
+                <label
+                  class="mdl-checkbox mdl-js-chceckbox mdl-js-ripple-effect"
+                  for="chceckbox-1"
+                >
+                  <input
+                    id="chceckbox-1"
+                    class="mdl-checkbox__input"
+                    type="checkbox"
+                  />
+                  <span class="mdl-checkbox__label">Checkbox</span>
+                </label>
+              </div>
+              <!--radio button w gridzie z toogle inputs-->
+              <p class="fullWidth">Radio button</p>
+              <div
+                class="
+                  mdl-cell mdl-cell--3-col-desktop
+                  contentPadingLeft
+                  contentAlignCnter
+                "
+              >
+                <label class="mdl-radio mdl-js-radio" for="radio1">
+                  <input
+                    id="radio1"
+                    class="mdl-radio__button"
+                    type="radio"
+                    name="options"
+                  />
+                  <span class="mdl-radio__label">Option 1</span>
+                </label>
+                <label class="mdl-radio mdl-js-radio" for="radio2">
+                  <input
+                    id="radio2"
+                    class="mdl-radio__button"
+                    type="radio"
+                    name="options"
+                  />
+                  <span class="mdl-radio__label">Option 2</span>
+                </label>
+              </div>
+              <!-- toogle switch  w gridzie z toogle inputs-->
+              <p class="fullWidth">Toogle switch</p>
+              <div
+                class="
+                  mdl-cell mdl-cell--3-col-desktop
+                  contentPadingLeft
+                  contentAlignCnter
+                "
+              >
+                <label class="mdl-switch mdl-js-switch" for="switch1">
+                  <input
+                    id="switch1"
+                    type="checkbox"
+                    class="mdl-switch__input"
+                  />
+                  <span class="mdl-switch__label"></span>
+                </label>
+              </div>
+              <!-- icon toogle w gridzie z toogle inpusts-->
+              <p class="fullWidth">Icon toogle</p>
+              <div
+                class="
+                  mdl-cell mdl-cell--3-col-desktop
+                  contentPadingLeft
+                  contentAlignCnter
+                "
+              >
+                <label
+                  class="mdl-icon-toggle mdl-js-icon-toggle"
+                  for="iconToggle1"
+                >
+                  <input
+                    id="iconToggle1"
+                    type="checkbox"
+                    class="mdl-icon-toggle__input"
+                  />
+                  <span class="mdl-icon-toggle__label material-icons"
+                    >mood</span
+                  >
+                </label>
+              </div>
             </div>
             <!-- text inputs-->
-            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
-                <h2 class="fullWidth">Text inputs</h2>
-                <div class="mdl-cell mdl-cell--6-col-desktop contentAlignCnter fullWidth">
-                    <div class="progressBar mdl-textfield mdl-js-textfield">
-                        <input id="textNormal1" class="mdl-textfield__input" type="text"/>
-                        <label class="mdl-textfield__label" for="textNormal1">Text...</label>
-                    </div>
+            <div
+              class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
+            >
+              <h2 class="fullWidth">Text inputs</h2>
+              <div
+                class="
+                  mdl-cell mdl-cell--6-col-desktop
+                  contentAlignCnter
+                  fullWidth
+                "
+              >
+                <div class="progressBar mdl-textfield mdl-js-textfield">
+                  <input
+                    id="textNormal1"
+                    class="mdl-textfield__input"
+                    type="text"
+                  />
+                  <label class="mdl-textfield__label" for="textNormal1"
+                    >Text...</label
+                  >
                 </div>
+              </div>
             </div>
             <!-- text input with floating label-->
-            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
-                <div class="mdl-cell mdl-cell--6-col-desktop contentAlignCnter fullWidth">
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label progressbar">
-                        <input id="textNormal2" class="mdl-textfield__input" type="text"/>
-                        <label class="mdl-textfield__label" for="textNormal2">Text...</label>
-                    </div>
+            <div
+              class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
+            >
+              <div
+                class="
+                  mdl-cell mdl-cell--6-col-desktop
+                  contentAlignCnter
+                  fullWidth
+                "
+              >
+                <div
+                  class="
+                    mdl-textfield mdl-js-textfield
+                    mdl-textfield--floating-label
+                    progressbar
+                  "
+                >
+                  <input
+                    id="textNormal2"
+                    class="mdl-textfield__input"
+                    type="text"
+                  />
+                  <label class="mdl-textfield__label" for="textNormal2"
+                    >Text...</label
+                  >
                 </div>
+              </div>
             </div>
             <!-- number text input with erroe chcking -->
-            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
-                <div class="mdl-cell mdl-cell--6-col-desktop contentAlignCnter fullWidth">
-                    <div class="mdl-textfield mdl-js-textfield progressbar">
-                        <input id="textNumerical1" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"/>
-                        <label class="mdl-textfield__label" for="textNumerical1">Number...</label>
-                        <span class="mdl-textfield__error">Input is not a numbet!</span>
-                    </div>
+            <div
+              class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
+            >
+              <div
+                class="
+                  mdl-cell mdl-cell--6-col-desktop
+                  contentAlignCnter
+                  fullWidth
+                "
+              >
+                <div class="mdl-textfield mdl-js-textfield progressbar">
+                  <input
+                    id="textNumerical1"
+                    class="mdl-textfield__input"
+                    type="text"
+                    pattern="-?[0-9]*(\.[0-9]+)?"
+                  />
+                  <label class="mdl-textfield__label" for="textNumerical1"
+                    >Number...</label
+                  >
+                  <span class="mdl-textfield__error"
+                    >Input is not a numbet!</span
+                  >
                 </div>
+              </div>
             </div>
             <!-- numbet text input with error checking floating label-->
-            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
-                <div class="mdl-cell mdl-cell--6-col-desktop contentAlignCnter fullWidth">
-                    <div class="mdl-textfield mdl-js-textfield progressbar mdl-textfield--floating-label">
-                        <input id="textNumerical2" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"/>
-                        <label class="mdl-textfield__label" for="textNumerical2">Number...</label>
-                        <span class="mdl-textfield__error">Input is not a numer!</span>
-                    </div>
+            <div
+              class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
+            >
+              <div
+                class="
+                  mdl-cell mdl-cell--6-col-desktop
+                  contentAlignCnter
+                  fullWidth
+                "
+              >
+                <div
+                  class="
+                    mdl-textfield mdl-js-textfield
+                    progressbar
+                    mdl-textfield--floating-label
+                  "
+                >
+                  <input
+                    id="textNumerical2"
+                    class="mdl-textfield__input"
+                    type="text"
+                    pattern="-?[0-9]*(\.[0-9]+)?"
+                  />
+                  <label class="mdl-textfield__label" for="textNumerical2"
+                    >Number...</label
+                  >
+                  <span class="mdl-textfield__error"
+                    >Input is not a numer!</span
+                  >
                 </div>
+              </div>
             </div>
             <!-- text input expandable-->
-            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
-                <div class="mdl-cell mdl-cell--6-col-desktop contentAlignCnter fullWidth">
-                    <div class="textAreaExpand mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <!-- dodajemy " mdl-textfield--floating-label " żeby zrobić tak, że tekst przesuwa się ponad input -->
-                        <textarea id="textArea1" class="mdl-textfield__input" type="text" rows="2"></textarea> <!-- rows ustawia ile linijek mamy na początku-->
-                        <label class="mdl-textfield__label" for="textArea1">Text...</label>
-                    </div>
+            <div
+              class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
+            >
+              <div
+                class="
+                  mdl-cell mdl-cell--6-col-desktop
+                  contentAlignCnter
+                  fullWidth
+                "
+              >
+                <div
+                  class="
+                    textAreaExpand
+                    mdl-textfield mdl-js-textfield
+                    mdl-textfield--floating-label
+                  "
+                >
+                  <!-- dodajemy " mdl-textfield--floating-label " żeby zrobić tak, że tekst przesuwa się ponad input -->
+                  <textarea
+                    id="textArea1"
+                    class="mdl-textfield__input"
+                    type="text"
+                    rows="2"
+                  ></textarea>
+                  <!-- rows ustawia ile linijek mamy na początku-->
+                  <label class="mdl-textfield__label" for="textArea1"
+                    >Text...</label
+                  >
                 </div>
+              </div>
             </div>
             <!-- text search box expandable-->
-            <div class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo">
-                <div class="mdl-cell mdl-cell--4-col-desktop contentAlignCnter fullWidth">
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield__expandable">
-                        <label class="mdl-button mdl-js-button mdl-button--icon" for="expandable-1">
-                            <i class="material-icons">search</i>
-                        </label>
-                        <div class="mdl-textfield__expandable-holder"> <!-- mówi, że to holder dla diva wyżej-->
-                            <input class="mdl-textfield__input" id="expandable-1">
-                            <label class="mdl-textfield__label">Expandable input</label>
-                        </div>
-                    </div>
+            <div
+              class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
+            >
+              <div
+                class="
+                  mdl-cell mdl-cell--4-col-desktop
+                  contentAlignCnter
+                  fullWidth
+                "
+              >
+                <div
+                  class="
+                    mdl-textfield mdl-js-textfield
+                    mdl-textfield__expandable
+                  "
+                >
+                  <label
+                    class="mdl-button mdl-js-button mdl-button--icon"
+                    for="expandable-1"
+                  >
+                    <i class="material-icons">search</i>
+                  </label>
+                  <div class="mdl-textfield__expandable-holder">
+                    <!-- mówi, że to holder dla diva wyżej-->
+                    <input class="mdl-textfield__input" id="expandable-1" />
+                    <label class="mdl-textfield__label">Expandable input</label>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-        
-            <!-- footer mega-->
-            <footer class="mdl-mega-footer">
-                <!-- top section-->
-                <div class="mdl-mega-footer--top-section">
-                    <div class="mdl-mega-footer--left-section">
-                        <button id="footerButton1" class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteInstagram()"><i class="material-icons">camera_alt</i></button>
-                        <div class="mdl-tooltip" for="footerButton1">Instagram</div>
-                        <button id="footerButton2" class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteFacebook()"><i class="material-icons">facebook</i></button>
-                        <div class="mdl-tooltip" for="footerButton2">Facebook</div>
-                        <button id="footerButton3" class="mdl-mega-footer--social-btn mdl-js-ripple-effect" onclick="openWebsiteGitHub()"><i class="material-icons">engineering</i></button>
-                        <div class="mdl-tooltip" for="footerButton3">GitHub</div>
-                    </div>
-                    <div class="mdl-mega-footer--right-section">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                    </div>
-                    
-                </div>
-                <!-- middle section-->
-                <div class="mdl-mega-footer--middle-section">
-                    <div class="mdl-mega-footer--drop-down-section">
-                        <h1 class="mdl-mega-footer--heading">Programowanie</h1>
-                        <ul class="mdl-mega-footer--link-list">
-                            <li><a href="programowanie.html#panelActive">HTML</a></li>
-                            <li><a href="programowanie.html#panelCSS">CSS</a></li>
-                            <li><a href="programowanie.html#panelJS">JavaScript</a></li>
-                            <li><a href="programowanie.html#panelC">C++</a></li>
-                        </ul>
-                    </div>
-                    <div class="mdl-mega-footer--drop-down-section">
-                        <h1 class="mdl-mega-footer--heading">Przydatne narzędzia</h1>
-                        <ul class="mdl-mega-footer--link-list">
-                            <li><a href="programy.html">Programy</a></li>
-                            <li><a href="#">Strony www</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- bottom section-->
-                <div class="mdl-mega-footer--bottom-section">
-                    <div class="mdl-logo">More information</div>
-                    <ul class="mdl-mega-footer--link-list">
-                        <li><a href="#">Privacy terms</a></li>
-                        <li><a href="#">Help</a></li>
-                    </ul>
-                </div>
-            </footer>
-        </main>
+
+        <!-- footer mega-->
+        <footer class="mdl-mega-footer">
+          <!-- top section-->
+          <div class="mdl-mega-footer--top-section">
+            <div class="mdl-mega-footer--left-section">
+              <button
+                id="footerButton1"
+                class="mdl-mega-footer--social-btn mdl-js-ripple-effect"
+                onclick="openWebsiteInstagram()"
+              >
+                <i class="material-icons">camera_alt</i>
+              </button>
+              <div class="mdl-tooltip" for="footerButton1">Instagram</div>
+              <button
+                id="footerButton2"
+                class="mdl-mega-footer--social-btn mdl-js-ripple-effect"
+                onclick="openWebsiteFacebook()"
+              >
+                <i class="material-icons">facebook</i>
+              </button>
+              <div class="mdl-tooltip" for="footerButton2">Facebook</div>
+              <button
+                id="footerButton3"
+                class="mdl-mega-footer--social-btn mdl-js-ripple-effect"
+                onclick="openWebsiteGitHub()"
+              >
+                <i class="material-icons">engineering</i>
+              </button>
+              <div class="mdl-tooltip" for="footerButton3">GitHub</div>
+            </div>
+            <div class="mdl-mega-footer--right-section">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+            </div>
+          </div>
+          <!-- middle section-->
+          <div class="mdl-mega-footer--middle-section">
+            <div class="mdl-mega-footer--drop-down-section">
+              <h1 class="mdl-mega-footer--heading">Programowanie</h1>
+              <ul class="mdl-mega-footer--link-list">
+                <li><a href="programowanie.html#panelActive">HTML</a></li>
+                <li><a href="programowanie.html#panelCSS">CSS</a></li>
+                <li><a href="programowanie.html#panelJS">JavaScript</a></li>
+                <li><a href="programowanie.html#panelC">C++</a></li>
+              </ul>
+            </div>
+            <div class="mdl-mega-footer--drop-down-section">
+              <h1 class="mdl-mega-footer--heading">Przydatne narzędzia</h1>
+              <ul class="mdl-mega-footer--link-list">
+                <li><a href="programy.html">Programy</a></li>
+                <li><a href="#">Strony www</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- bottom section-->
+          <div class="mdl-mega-footer--bottom-section">
+            <div class="mdl-logo">More information</div>
+            <ul class="mdl-mega-footer--link-list">
+              <li><a href="#">Privacy terms</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
     </div>
     <script>
-    window.onload = function() {    
+      window.onload = function () {
+        var pageTitle = document.title;
+        var attentionMessage = "Come Back!";
 
-    var pageTitle = document.title;
-    var attentionMessage = 'Come Back!';
+        document.addEventListener("visibilitychange", function (e) {
+          var isPageActive = !document.hidden;
 
-    document.addEventListener('visibilitychange', function(e) {
-    var isPageActive = !document.hidden;
-
-    if(!isPageActive){
-        document.title = attentionMessage;
-    }else {
-        document.title = pageTitle;
-    }
-    });
-    };
+          if (!isPageActive) {
+            document.title = attentionMessage;
+          } else {
+            document.title = pageTitle;
+          }
+        });
+      };
     </script>
-        <noscript>This website rewures JavaScript to work as it should</noscript>
-</body>
+    <noscript>This website rewures JavaScript to work as it should</noscript>
+  </body>
 </html>
