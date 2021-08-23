@@ -1100,23 +1100,9 @@
             <div
               class="mdl-grid containerGridMax itemsAligmentCenterForMDLDemo"
             >
-              <div
-                class="
-                  mdl-cell mdl-cell--4-col-desktop
-                  contentAlignCnter
-                  fullWidth
-                "
-              >
-                <div
-                  class="
-                    mdl-textfield mdl-js-textfield
-                    mdl-textfield__expandable
-                  "
-                >
-                  <label
-                    class="mdl-button mdl-js-button mdl-button--icon"
-                    for="expandable-1"
-                  >
+              <div class="mdl-cell mdl-cell--4-col-desktop contentAlignCnter fullWidth">
+                <div class=" mdl-textfield mdl-js-textfield  mdl-textfield__expandable">
+                  <label class="mdl-button mdl-js-button mdl-button--icon" for="expandable-1">
                     <i class="material-icons">search</i>
                   </label>
                   <div class="mdl-textfield__expandable-holder">
@@ -1125,6 +1111,41 @@
                     <label class="mdl-textfield__label">Expandable input</label>
                   </div>
                 </div>
+              </div>
+              <!-- tables                                -->
+              <h2 class="fullWidth">Table</h2>
+              <div class="mdl-cell contentAlignCnter fullWidth">
+                <table class="progressBar mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-data-table--selectable">
+                  <thead> <!-- nagłówek jakby, tam gdzie jest opis kolumn--> <!--table date-->
+                      <tr>
+                          <th class="mdl-data-table__cell--non-numeric">Food</th>
+                          <th>Quantity</th>
+                          <th>Unit price</th>
+                      </tr>
+                  </thead>
+                  <tbody> <!-- table body-->
+                      <tr>
+                          <td class="mdl-data-table__cell--non-numeric">Chees</td> <!-- table data, czyli gdzie są przechowywane wartości --><!-- przesówamy za pomocą klasy w lewo-->
+                          <td>3</td>
+                          <td> 2.00</td>
+                      </tr>
+                      <tr>
+                          <td class="mdl-data-table__cell--non-numeric">Chcicken</td>
+                          <td>5</td>
+                          <td>3.90</td>
+                      </tr>
+                      <tr>
+                          <td class="mdl-data-table__cell--non-numeric">Beef</td>
+                          <td>1</td>
+                          <td>2.60</td>
+                      </tr>
+                      <tr>
+                          <td class="mdl-data-table__cell--non-numeric">Ham</td>
+                          <td>3</td>
+                          <td>1.30</td>
+                      </tr>
+                  </tbody>
+              </table>
               </div>
             </div>
           </div>
