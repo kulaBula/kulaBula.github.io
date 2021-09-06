@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <title>My first MDL website</title>
+    <title>Archiwum plików klasy 2D</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -12,7 +12,7 @@
         <header class="mdl-layout__header mdl-layout__header--waterfall mdl-layout__header--transparent">
             <div class="mdl-layout__header-row">
             <!-- ten header row pozostaje pusty, ponieważ w górnym jest tylko drawer-->
-            <span class="mdl-layout-title mainTitleTextColor">This is my first MDL website</span>
+            <span class="mdl-layout-title ">Archiwum plików klasy 2D</span>
             <div class="mdl-layout-spacer"></div>
                 <nav class="mdl-navigation textColorWhite">
                     <!-- <button class="mdl-button mdl-js-button mdl-js-ripple-effect>" onclick="goHome()" id="goHomeButton">
@@ -33,39 +33,38 @@
             <div class="mdl-layout__header-row ">
                     <div class="mdl-layout-spacer"></div>
                     <nav class="mdl-navigation textColorWhite">
-                        <a class="mdl-navigation__link textColorWhite" href="#footer"><span>Contact</span></a>
+                        <a class="mdl-navigation__link textColorWhite" href="#footer" id="openContactModal"><span>Contact</span></a>
+                        <!-- <button id="openContactModal" class="mdl-button mdl-js-button mdl-js-ripple-effect">Contact</button> -->
                         <a class="mdl-navigation__link textColorWhite" href="#footer"><span>Social Media</span></a>
                     </nav>
                 </div>
         </header>
 
+<!-- modal ------------------------------------------------------------------------------------------------------------------------------------------>
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
         <div class="mdl-layout__drawer" id="layoutDrawerBackground">
-            <span class="mdl-layout-title" id="layoutDrawerTextTitle">Pick your site:</span>
+            <span class="mdl-layout-title" id="layoutDrawerTextTitle">Wybierz przedmiot</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="index.html" id="layoutDrawerText1">Home</a>
-                <a class="mdl-navigation__link" href="programowanie.html" id="layoutDrawerText2">Programming</a>
-                <a class="mdl-navigation__link" href="#" id="layoutDrawerText3">School</a>
-                <a class="mdl-navigation__link" href="#" id="layoutDrawerText4">Free time</a>
-                <a class="mdl-navigation__link" href="#" id="layoutDrawerText5">Contact</a>
+                <a class="mdl-navigation__link" href="index.html" id="layoutDrawerText1">Polski</a>
+                <a class="mdl-navigation__link" href="programowanie.html" id="layoutDrawerText2">Matematyka</a>
+                <a class="mdl-navigation__link" href="#" id="layoutDrawerText3">Angielski</a>
+                <a class="mdl-navigation__link" href="#" id="layoutDrawerText4">Chemia</a>
+                <a class="mdl-navigation__link" href="#" id="layoutDrawerText5">Nie wiem</a> <!-- dodać jakiś alaet na onclick -->
             </nav>
         </div>
 
         <main class="mdl-layout__content container" id="mainLayout">
             <div class="mdl-grid containerGridMax">
-                <h1>Hello there</h1>
-                I'm Jacob, a student from poznań who enjoy programminig. I am a chemistry enjoyer. I love to read books of all kind, sports, especaily shooting. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti sapiente quibusdam iste? Voluptate vero ipsam maxime officiis architecto modi amet in voluptatum placeat iure? Ad, facere blanditiis! Magni, consequuntur dolores.
-                Velit laboriosam aut nisi labore, esse laudantium ipsam facere dignissimos dolorum molestias corrupti corporis? Repellendus dolorum, minus libero magnam hic iusto eum iure delectus, esse, beatae facere! Ad, expedita possimus!
-                Dolorem fugit totam suscipit, minima repellendus a quod, consequatur odit eligendi minus corporis neque esse modi sequi laboriosam magni? Doloribus reiciendis rerum debitis doloremque reprehenderit labore officia, recusandae voluptatibus aspernatur!
-                Nulla vel vitae aliquam esse cupiditate adipisci. Dolore facilis deleniti, quos laboriosam corporis provident id blanditiis impedit commodi quam quisquam quas. Tempore, nisi! Inventore voluptates numquam perferendis animi veniam cumque!
-                Soluta, officia incidunt eos dignissimos inventore repudiandae optio saepe delectus accusamus laudantium blanditiis maxime facilis cumque perferendis dicta possimus corrupti excepturi sint! Vero laudantium ipsum ea fuga totam accusamus ipsam? 
+                <h1>Hejka</h1>
+                Znajdziecie tutaj wszystkie potrzebne pliki z pierwszej klasy i wiele więcej. Chyba, że ich nie dodamy, to wtedy nie. 
             </div>
             <div class="backgroundColorForNewMain mdl-shadow--8dp itemCenterAligment textAligmentCenter" id="specialClassBackground">
                 <div class="specialClass contentMarginTop" id="specialClass"></div>
-                <h1 id="specialClassText1"> Chcekout the alternative home page</h1>
-                <p id="specialClassText2"> Take a look at how this page could look like</p>
+                <h1 id="specialClassText1"> Zacznij pobierać sobie polski!</h1>
+                <p id="specialClassText2"> Klikając poniższy link przeniesiesz się na stronę z plikami z języka polskiego</p>
                 <div class="contentForButtonForSwitchingHomePages">
                     <div class="buttonForSwitchingHomePages">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="openWebsiteAlternativeHomePage()">Show me!</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="opneWebsiteArchiwum()">Lecimy!</button>
                 </div>
                 </div>
                 
@@ -74,26 +73,26 @@
                 <div class="mdl-cell mdl-cell--6-col contentPading itemCenterAligment">
                     <div class=" mdl-card mdl-shadow--4dp welcome-card" id="welcomeCard1">
                         <div class="mdl-card__title"> 
-                            <h2 class="mdl-card__title-text" id="welcomeCard1TextTitle">Programming</h2>
+                            <h2 class="mdl-card__title-text" id="welcomeCard1TextTitle">Matematyka</h2>
                         </div>
                         <div class="mdl-card__supporting-text"  id="welcomeCard1text">
-                            Checkout my programming stuff and project! You will find there some HTML, CSS, Java Script, Material Design Lite and C++!
+                            Tutaj znajdziesz pliki z matematyki takie jak słownictwo angielskie, jakieś zadania czy inne wklejki naklejki!
                         </div>
                         <div class="mdl-card__actions mdl-card--border"> 
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" onclick="document.location='programowanie.html'">Go there!</button>
+                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" onclick="document.location='programowanie.html'">Lecimy!</button>
                         </div>
                     </div>
                 </div>
                 <div class="mdl-cell mdl-cell--6-col contentPading itemCenterAligment">
                      <div class=" mdl-card mdl-shadow--4dp welcome-card" id="welcomeCard2">
                     <div class="mdl-card__title"> 
-                        <h2 class="mdl-card__title-text" id="welcomeCard2TextTitle">School</h2>
+                        <h2 class="mdl-card__title-text" id="welcomeCard2TextTitle">Angielski</h2>
                     </div>
                     <div class="mdl-card__supporting-text" id="welcomeCard2text">
-                        Sorry, this page is still under construction... Please check after sometime, mayby we will be ready with it
+                        Tutaj znajdziesz pliki z angielskiego takie jak słownictwo, jakieś zadania czy inne wklejki naklejki!
                     </div>
                     <div class="mdl-card__actions mdl-card--border"> 
-                        <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect">Click Here</button>
+                        <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect">Lecimy!</button>
                     </div>
                 </div>
                 </div>
@@ -173,7 +172,18 @@
     }
     });
     };
+    function download() {
+    var fileName = "aha.txt";
+    var fileUrl = "files/aha.txt";
+    var a = document.createElement("a");
+    a.href = fileUrl;
+    a.setAttribute("download", fileName);
+    a.click();
+  }
+  
+    
     </script>
+    
     <noscript>This website reqiures JavaScript to work as it should</noscript>
 </body>
 </html>
