@@ -45,7 +45,7 @@
         <div class="mdl-layout__drawer" id="layoutDrawerBackground">
             <span class="mdl-layout-title" id="layoutDrawerTextTitle">Wybierz przedmiot</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="index.html" id="layoutDrawerText1">Polski</a>
+                <a class="mdl-navigation__link" href="archiwum.html" id="layoutDrawerText1">Polski</a>
                 <a class="mdl-navigation__link" href="programowanie.html" id="layoutDrawerText2">Matematyka</a>
                 <a class="mdl-navigation__link" href="#" id="layoutDrawerText3">Angielski</a>
                 <a class="mdl-navigation__link" href="#" id="layoutDrawerText4">Chemia</a>
@@ -55,7 +55,7 @@
 
         <main class="mdl-layout__content container" id="mainLayout">
             <div class="mdl-grid containerGridMax">
-                <h1>Hejka</h1>
+                <h1>Hejka!</h1>
                 Znajdziecie tutaj wszystkie potrzebne pliki z pierwszej klasy i wiele więcej. Chyba, że ich nie dodamy, to wtedy nie. 
             </div>
             <div class="backgroundColorForNewMain mdl-shadow--8dp itemCenterAligment textAligmentCenter" id="specialClassBackground">
@@ -118,27 +118,27 @@
                         <div class="mdl-tooltip" for="footerButton3">GitHub</div>
                     </div>
                     <div class="mdl-mega-footer--right-section">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
+                        <a href="https://liceum38.poznan.pl/">Szkoła</a>
+                        <a href="https://lo38poznan.mobidziennik.pl/dziennik/">Mobi dziennik</a>
                     </div>
                     
                 </div>
                 <!-- middle section-->
                 <div class="mdl-mega-footer--middle-section">
                     <div class="mdl-mega-footer--drop-down-section">
-                        <h1 class="mdl-mega-footer--heading">Programowanie</h1>
+                        <h1 class="mdl-mega-footer--heading">Przedmioty</h1>
                         <ul class="mdl-mega-footer--link-list">
-                            <li><a onclick="changeTab()" href="programowanie.html#panelActive" >HTML</a></li>
-                            <li><a onclick="changeTabCSS()" href="programowanie.html#panelCSS" >CSS</a></li>
-                            <li><a onclick="changeTabJS()" href="programowanie.html#panelJS" >JavaScript</a></li>
-                            <li><a onclick="changeTabC()" href="programowanie.html#panelC" >C++</a></li>
+                            <li><a onclick="changeTab()" href="programowanie.html#panelActive">Polski</a></li>
+                            <li><a onclick="changeTabCSS()" href="programowanie.html#panelCSS">Matematyka</a></li>
+                            <li><a onclick="changeTabJS()" href="programowanie.html#panelJS" >Angielski</a></li>
+                            <li><a onclick="changeTabC()" href="programowanie.html#panelC" >Chemia?</a></li>
                         </ul>
                     </div>
                     <div class="mdl-mega-footer--drop-down-section">
-                        <h1 class="mdl-mega-footer--heading">Przydatne narzędzia</h1>
+                        <h1 class="mdl-mega-footer--heading">Social Media</h1>
                         <ul class="mdl-mega-footer--link-list">
-                            <li><a href="programy.html">Programy</a></li>
-                            <li><a href="#">Strony www</a></li>
+                            <li><a href="programy.html">Moje</a></li>
+                            <li><a href="#">Innych</a></li>
                         </ul>
                     </div>
                 </div>
@@ -154,9 +154,6 @@
         </main>
     </div>
     <script>
-    // import { mdiFacebook } from '@mdi/js';
-    // import { mdiGithub } from '@mdi/js';
-    // import { mdiInstagram } from '@mdi/js';
     window.onload = function() {    
 
     var pageTitle = document.title;
@@ -171,17 +168,7 @@
         document.title = pageTitle;
     }
     });
-    };
-    function download() {
-    var fileName = "aha.txt";
-    var fileUrl = "files/aha.txt";
-    var a = document.createElement("a");
-    a.href = fileUrl;
-    a.setAttribute("download", fileName);
-    a.click();
-  }
-  
-    
+    };   
     </script>
     
     <noscript>This website reqiures JavaScript to work as it should</noscript>
