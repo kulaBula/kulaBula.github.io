@@ -228,7 +228,7 @@
 <tr>
   <td class="mdl-data-table__cell--non-numeric">Polski</td>
   <td>Profil psychologiczny Makbeta</td>
-  <td>docx</td>
+  <td>PDF</td>
   <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadProfilMakbet()"><i class="material-icons">download</i></button></td>
 </tr>
 <tr>
@@ -573,14 +573,14 @@
         a.setAttribute("download", fileName);
         a.click();
     }
-    // function downloadProfilMakbet() {
-    //     var fileName = "barok wstęp do epoki.docx";
-    //     var fileUrl = "files/barok wstęp do epoki.docx";
-    //     var a = document.createElement("a");
-    //     a.href = fileUrl;
-    //     a.setAttribute("download", fileName);
-    //     a.click();
-    // }
+    function downloadProfilMakbet() {
+        var fileName = "Profil_psychologiczny_Makbet_Jakub_Kuliński.docx";
+        var fileUrl = "files/Profil_psychologiczny_Makbet_Jakub_Kuliński.docx";
+        var a = document.createElement("a");
+        a.href = fileUrl;
+        a.setAttribute("download", fileName);
+        a.click();
+    }
     function downloadKrotkoscZywota() {
         var fileName = "NOTATKA NABOROWSKI MARNOŚĆ, KRÓTKOŚĆ ŻYWOTA.docx";
         var fileUrl = "files/NOTATKA NABOROWSKI MARNOŚĆ, KRÓTKOŚĆ ŻYWOTA.docx";
