@@ -26,8 +26,8 @@
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Pick your site:</span>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="archiwum.html" id="layoutDrawerText1">Polski</a>
-          <a class="mdl-navigation__link" href="#" id="layoutDrawerText2" onclick="alertAvast()">Matematyka</a>
+          <a class="mdl-navigation__link" href="#" id="layoutDrawerText1" onclick="goPolish()">Polski</a>
+          <a class="mdl-navigation__link" href="#" id="layoutDrawerText2" onclick="goMath()">Matematyka</a>
           <a class="mdl-navigation__link" href="#" id="layoutDrawerText3" onclick="alertAvast()">Angielski</a>
           <a class="mdl-navigation__link" href="#" id="layoutDrawerText4" onclick="alertAvast()">Chemia</a>
           <a class="mdl-navigation__link" href="#" id="layoutDrawerText5" onclick="alertAvast()">Nie wiem</a> <!-- dodać jakiś alaet na onclick -->
@@ -307,8 +307,8 @@
               <div class="mdl-mega-footer--drop-down-section">
                   <h1 class="mdl-mega-footer--heading">Przedmioty</h1>
                   <ul class="mdl-mega-footer--link-list">
-                      <li><a onclick="alertAvast()" href="#">Polski</a></li>
-                      <li><a onclick="alertAvast()" href="#">Matematyka</a></li>
+                      <li><a onclick="goPolish()" href="#">Polski</a></li>
+                      <li><a onclick="goMath()" href="#">Matematyka</a></li>
                       <li><a onclick="alertAvast()" href="#" >Angielski</a></li>
                       <li><a onclick="alertAvast()" href="#" >Chemia?</a></li>
                   </ul>
@@ -613,30 +613,30 @@
         a.setAttribute("download", fileName);
         a.click();
     }
-    function download() {
-        var fileName = "barok wstęp do epoki.docx";
-        var fileUrl = "files/barok wstęp do epoki.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function download() {
-        var fileName = "barok wstęp do epoki.docx";
-        var fileUrl = "files/barok wstęp do epoki.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function download() {
-        var fileName = "barok wstęp do epoki.docx";
-        var fileUrl = "files/barok wstęp do epoki.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
+    // function download() {
+    //     var fileName = "barok wstęp do epoki.docx";
+    //     var fileUrl = "files/barok wstęp do epoki.docx";
+    //     var a = document.createElement("a");
+    //     a.href = fileUrl;
+    //     a.setAttribute("download", fileName);
+    //     a.click();
+    // }
+    // function download() {
+    //     var fileName = "barok wstęp do epoki.docx";
+    //     var fileUrl = "files/barok wstęp do epoki.docx";
+    //     var a = document.createElement("a");
+    //     a.href = fileUrl;
+    //     a.setAttribute("download", fileName);
+    //     a.click();
+    // }
+    // function download() {
+    //     var fileName = "barok wstęp do epoki.docx";
+    //     var fileUrl = "files/barok wstęp do epoki.docx";
+    //     var a = document.createElement("a");
+    //     a.href = fileUrl;
+    //     a.setAttribute("download", fileName);
+    //     a.click();
+    // }
 
     </script>
     <noscript>This website rewures JavaScript to work as it should</noscript>

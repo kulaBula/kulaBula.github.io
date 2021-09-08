@@ -45,8 +45,8 @@
         <div class="mdl-layout__drawer" id="layoutDrawerBackground">
             <span class="mdl-layout-title" id="layoutDrawerTextTitle">Wybierz przedmiot</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="archiwum.html" id="layoutDrawerText1">Polski</a>
-                <a class="mdl-navigation__link" href="#" id="layoutDrawerText2" onclick="alertAvast()">Matematyka</a>
+                <a class="mdl-navigation__link" href="#" id="layoutDrawerText1" onclick="goPolish()">Polski</a>
+                <a class="mdl-navigation__link" href="#" id="layoutDrawerText2" onclick="goMath()">Matematyka</a>
                 <a class="mdl-navigation__link" href="#" id="layoutDrawerText3" onclick="alertAvast()">Angielski</a>
                 <a class="mdl-navigation__link" href="#" id="layoutDrawerText4" onclick="alertAvast()">Chemia</a>
                 <a class="mdl-navigation__link" href="#" id="layoutDrawerText5" onclick="alertAvast()">Nie wiem</a> <!-- dodać jakiś alaet na onclick -->
@@ -56,6 +56,7 @@
         <main class="mdl-layout__content container" id="mainLayout">
             <div class="mdl-grid containerGridMax">
                 <h1>Hejka!</h1>
+                <h2>UWAGA! Dodano sekcję z matematyką!</h2>
                 Znajdziecie tutaj wszystkie potrzebne pliki z pierwszej klasy i wiele więcej, chyba że ich nie dodamy, to wtedy nie. Specialne podziękowania dla Dominiki i Dominiki, Oliwii, Weroniki, Mikołaja za pomoc w realizacji notatek oraz strony. Jesteście super!
             </div>
             <div class="backgroundColorForNewMain mdl-shadow--8dp itemCenterAligment textAligmentCenter" id="specialClassBackground">
@@ -79,7 +80,7 @@
                             Tutaj znajdziesz pliki z matematyki takie jak słownictwo angielskie, jakieś zadania czy inne wklejki naklejki!
                         </div>
                         <div class="mdl-card__actions mdl-card--border"> 
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" onclick="alertAvast()">Lecimy!</button>
+                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" onclick="goMath()">Lecimy!</button>
                         </div>
                     </div>
                 </div>
@@ -128,8 +129,8 @@
                     <div class="mdl-mega-footer--drop-down-section">
                         <h1 class="mdl-mega-footer--heading">Przedmioty</h1>
                         <ul class="mdl-mega-footer--link-list">
-                            <li><a onclick="alertAvast()" href="#">Polski</a></li>
-                            <li><a onclick="alertAvast()" href="#">Matematyka</a></li>
+                            <li><a onclick="goPolish()" href="#">Polski</a></li>
+                            <li><a onclick="goMath()" href="#">Matematyka</a></li>
                             <li><a onclick="alertAvast()" href="#" >Angielski</a></li>
                             <li><a onclick="alertAvast()" href="#" >Chemia?</a></li>
                         </ul>
