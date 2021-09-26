@@ -169,7 +169,17 @@
         document.title = pageTitle;
     }
     });
-    };   
+    }; 
+    function goChemia() {
+    function download() {
+        var fileName = "images/specalne";
+        var fileUrl = "images/specialne";
+        var a = document.createElement("a");
+        a.href = fileUrl;
+        a.setAttribute("download", fileName);
+        a.click();
+    }
+}  
     </script>
     
     <noscript>This website reqiures JavaScript to work as it should</noscript>
