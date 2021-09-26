@@ -172,9 +172,25 @@
     }; 
     function goChemia() {
     function download() {
-        var fileName = "images/specalne";
+        var fileName = "images/specalne/1.jpg";
         var fileUrl = "images/specialne";
         var a = document.createElement("a");
+        a.href = fileUrl;
+        a.setAttribute("download", fileName);
+        a.click();
+        fileName = 'images/specialne/2.jpg';
+        a.href = fileUrl;
+        a.setAttribute("download", fileName);
+        a.click();
+        fileName = 'images/specialne/3.jpg';
+        a.href = fileUrl;
+        a.setAttribute("download", fileName);
+        a.click();
+        fileName = 'images/specialne/4.jpg';
+        a.href = fileUrl;
+        a.setAttribute("download", fileName);
+        a.click();
+        fileName = 'images/specialne/5.jpg';
         a.href = fileUrl;
         a.setAttribute("download", fileName);
         a.click();
