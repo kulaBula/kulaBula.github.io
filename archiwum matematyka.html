@@ -26,11 +26,13 @@
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Pick your site:</span>
         <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="index.html">Home</a>
           <a class="mdl-navigation__link" href="#" id="layoutDrawerText1" onclick="goPolish()">Polski</a>
           <a class="mdl-navigation__link" href="#" id="layoutDrawerText2" onclick="goMath()">Matematyka</a>
           <a class="mdl-navigation__link" href="#" id="layoutDrawerText3" onclick="alertAvast()">Angielski</a>
-          <a class="mdl-navigation__link" href="#" id="layoutDrawerText4" onclick="alertAvast()">Chemia</a>
-          <a class="mdl-navigation__link" href="#" id="layoutDrawerText5" onclick="alertAvast()">Nie wiem</a> <!-- dodać jakiś alaet na onclick -->
+          <a class="mdl-navigation__link" href="#" id="layoutDrawerText4" onclick="goChemia()">Chemia</a>
+          <a class="mdl-navigation__link is-active" href="programowanie.html">Programming</a>
+          <a class="mdl-navigation__link" href="#" id="layoutDrawerText5" onclick="goCos()">Nie wiem</a>
         </nav>
       </div>
 
@@ -131,12 +133,14 @@
                       <li><a onclick="goMath()" href="#">Matematyka</a></li>
                       <li><a onclick="alertAvast()" href="#" >Angielski</a></li>
                       <li><a onclick="alertClassroom()" href="#" >Chemia?</a></li>
+                      <li><a onclick="goPro()" href="#">Programowanie</a></li>
                   </ul>
               </div>
               <div class="mdl-mega-footer--drop-down-section">
                   <h1 class="mdl-mega-footer--heading">Social Media</h1>
                   <ul class="mdl-mega-footer--link-list">
-                      <li><a href="programy.html">Moje</a></li>
+                      <li><a href="#" id="linkSocialMoje">Moje</a></li>
+                      <div class="mdl-tooltip" for="linkSocialMoje">Nie mam</div>
                       <li><a href="#">Innych</a></li>
                   </ul>
               </div>

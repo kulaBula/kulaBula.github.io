@@ -39,9 +39,6 @@
                     </nav>
                 </div>
         </header>
-
-<!-- modal ------------------------------------------------------------------------------------------------------------------------------------------>
-<!----------------------------------------------------------------------------------------------------------------------------------------------------->
         <div class="mdl-layout__drawer" id="layoutDrawerBackground">
             <span class="mdl-layout-title" id="layoutDrawerTextTitle">Wybierz przedmiot</span>
             <nav class="mdl-navigation">
@@ -49,14 +46,14 @@
                 <a class="mdl-navigation__link" href="#" id="layoutDrawerText2" onclick="goMath()">Matematyka</a>
                 <a class="mdl-navigation__link" href="#" id="layoutDrawerText3" onclick="alertAvast()">Angielski</a>
                 <a class="mdl-navigation__link" href="#" id="layoutDrawerText4" onclick="goChemia()">Chemia</a>
-                <a class="mdl-navigation__link" href="#" id="layoutDrawerText5" onclick="goCos()">Nie wiem</a> <!-- dodać jakiś alaet na onclick -->
+                <a class="mdl-navigation__link is-active" href="programowanie.html">Programming</a>
+                <a class="mdl-navigation__link" href="#" id="layoutDrawerText5" onclick="goCos()">Nie wiem</a>
             </nav>
         </div>
 
         <main class="mdl-layout__content container" id="mainLayout">
             <div class="mdl-grid containerGridMax">
                 <h1>Hejka!</h1>
-                <!-- <h2>UWAGA! Dodano sekcję z matematyką!</h2> -->
                 Znajdziecie tutaj wszystkie potrzebne pliki z pierwszej klasy i wiele więcej, chyba że ich nie dodamy, to wtedy nie. Specialne podziękowania dla Dominiki i Dominiki, Oliwii, Weroniki, Mikołaja za pomoc w realizacji notatek oraz strony. Jesteście super!
             </div>
             <div class="backgroundColorForNewMain mdl-shadow--8dp itemCenterAligment textAligmentCenter" id="specialClassBackground">
@@ -69,22 +66,18 @@
                 </div>
                 </div>
             </div>
-            <!--------------------------------------------UWAGA------------------------------------------------------>
-            <div class="backgroundColorForNewMain mdl-shadow--8dp itemCenterAligment textAligmentCenter">
-                <canvas id="bg"></canvas>
-            </div>
-            <!-------------------------------------------KONIEC UWAGI---------------------------------------------------->
             <div class="mdl-grid containerGridMax contentPading itemCenterAligment">
                 <div class="mdl-cell mdl-cell--6-col contentPading itemCenterAligment">
                     <div class=" mdl-card mdl-shadow--4dp welcome-card" id="welcomeCard1">
                         <div class="mdl-card__title"> 
-                            <h2 class="mdl-card__title-text" id="welcomeCard1TextTitle">Matematyka</h2>
+                            <h2 class="mdl-card__title-text" id="welcomeCard1TextTitle">Programowanie</h2>
                         </div>
                         <div class="mdl-card__supporting-text"  id="welcomeCard1text">
-                            Tutaj znajdziesz pliki z matematyki takie jak słownictwo angielskie, jakieś zadania czy inne wklejki naklejki!
+                            Tutaj znajdziesz krótkie lekcje podstaw kilku języków programowania oraz demo MDL (użytego do budowy tej strony)
                         </div>
                         <div class="mdl-card__actions mdl-card--border"> 
-                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" onclick="goMath()">Lecimy!</button>
+                            <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" id="buttonLecimyIndexPro" onclick="goMath()">Lecimy!</button>
+                            <div class="mdl-tooltip" for="buttonLecimyIndexPro">Na razie nie ma żadnych lekcji</div>
                         </div>
                     </div>
                 </div>
@@ -137,12 +130,14 @@
                             <li><a onclick="goMath()" href="#">Matematyka</a></li>
                             <li><a onclick="alertAvast()" href="#" >Angielski</a></li>
                             <li><a onclick="alertClassroom()" href="#" >Chemia?</a></li>
+                            <li><a onclick="goPro()" href="#">Programowanie</a></li>
                         </ul>
                     </div>
                     <div class="mdl-mega-footer--drop-down-section">
                         <h1 class="mdl-mega-footer--heading">Social Media</h1>
                         <ul class="mdl-mega-footer--link-list">
-                            <li><a href="programy.html">Moje</a></li>
+                            <li><a href="#" id="linkSocialMoje">Moje</a></li>
+                            <div class="mdl-tooltip" for="linkSocialMoje">Nie mam</div>
                             <li><a href="#">Innych</a></li>
                         </ul>
                     </div>
