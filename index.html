@@ -68,8 +68,12 @@
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="opneWebsiteArchiwum()">Lecimy!</button>
                 </div>
                 </div>
-                
             </div>
+            <!--------------------------------------------UWAGA------------------------------------------------------>
+            <div class="backgroundColorForNewMain mdl-shadow--8dp itemCenterAligment textAligmentCenter">
+                <canvas id="bg"></canvas>
+            </div>
+            <!-------------------------------------------KONIEC UWAGI---------------------------------------------------->
             <div class="mdl-grid containerGridMax contentPading itemCenterAligment">
                 <div class="mdl-cell mdl-cell--6-col contentPading itemCenterAligment">
                     <div class=" mdl-card mdl-shadow--4dp welcome-card" id="welcomeCard1">
@@ -132,7 +136,7 @@
                             <li><a onclick="goPolish()" href="#">Polski</a></li>
                             <li><a onclick="goMath()" href="#">Matematyka</a></li>
                             <li><a onclick="alertAvast()" href="#" >Angielski</a></li>
-                            <li><a onclick="alertAvast()" href="#" >Chemia?</a></li>
+                            <li><a onclick="alertClassroom()" href="#" >Chemia?</a></li>
                         </ul>
                     </div>
                     <div class="mdl-mega-footer--drop-down-section">
@@ -170,66 +174,6 @@
     }
     });
     }; 
-    function goChemia() {
-    var fileName = "images/specialne/1.jpg";
-        var fileUrl = "images/specialne";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-        fileName = 'images/specialne/2.jpg';
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-        fileName = 'images/specialne/3.jpg';
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-        fileName = 'images/specialne/4.jpg';
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-        fileName = 'images/specialne/5.jpg';
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-        fileName = 'images/specialne/6.jpg';
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-        fileName = 'images/specialne/7.jpg';
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-        fileName = 'images/specialne/8.jpg';
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-        fileName = 'images/specialne/9.jpg';
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-        fileName = 'images/specialne/10.jpg';
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-        fileName = 'images/specialne/11.jpg';
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-        fileName = 'images/specialne/12.jpg';
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function goCos(){
-        var fileName = "images/specialne/1.jpg";
-        var fileUrl = "images/specialne";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
     </script>
     
     <noscript>This website reqiures JavaScript to work as it should</noscript>

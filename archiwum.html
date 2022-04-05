@@ -14,10 +14,6 @@
           <span class="mdl-layout-title mainTitleTextColor">Archiwum polskiego</span>
           <div class="mdl-layout-spacer"></div>
           <nav class="mdl-navigation">
-            <!-- <button class="mdl-button mdl-js-button mdl-js-ripple-effect>" onclick="goHome()" id="goHomeButton">
-              Home
-          </button>
-          <div class="mdl-tooltip" for="goHomeButton">Takes you home</div> -->
           <a class="mdl-navigation__link textColorWhite" href="index.html"><span>Home</span></a>
           </nav>
         </div>
@@ -35,247 +31,81 @@
       </div>
 
       <main class="mdl-layout__content container positionRelative">
-        <!-- <div class="mdl-tabs mdl-js-tabs">
-          <div class="mdl-tabs__tab-bar">
-            <a href="#panelActive" class="mdl-tabs__tab is-active">HTML</a>
-            <a href="#panelCSS" class="mdl-tabs__tab">CSS</a>
-            <a href="#panelJS" class="mdl-tabs__tab">JavaScript</a>
-            <a href="#panelC" class="mdl-tabs__tab">C++</a>
-            <a href="#panelMDL-Demo" class="mdl-tabs__tab">MDL-Demo</a>
-          </div> -->
           <div class="textPolski">
               <h1 class="">Język polski</h1>
         </div>
-              <div class="tabelaPolski">
-                <table class="progressBar mdl-data-table mdl-js-data-table mdl-shadow--2dp contentMargin">
-                  <thead> <!-- nagłówek jakby, tam gdzie jest opis kolumn--> <!--table date-->
-                      <tr>
-                          <th class="mdl-data-table__cell--non-numeric">Przedmiot</th>
-                          <th>Plik</th>
-                          <th>Typ</th>
-                          <th></th>
-                      </tr>
-                  </thead>
-                  <tbody> <!-- table body-->
-                      <tr>
-                          <td class="mdl-data-table__cell--non-numeric">Polski</td> <!-- table data, czyli gdzie są przechowywane wartości --><!-- przesówamy za pomocą klasy w lewo-->
-                          <td>Antyk</td>
-                          <td>PDF</td>
-                          <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadAntyk()"><i class="material-icons">download</i></button></td>
-                      </tr>
-                      <tr>
-                          <td class="mdl-data-table__cell--non-numeric">Polski</td>
-                          <td>"Chmury"</td>
-                          <td>docx</td>
-                          <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadChmury()"><i class="material-icons">download</i></button></td>
-                      </tr>
-                      <tr>
-                        <td class="mdl-data-table__cell--non-numeric">Polski</td>
-                        <td>Liryka antyczna</td>
-                        <td>docx</td>
-                        <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadLirykaAntyczna()"><i class="material-icons">download</i></button></td>
-                    </tr>
-                    <tr>
-                      <td class="mdl-data-table__cell--non-numeric">Polski</td>
-                      <td>Teatr i dramat</td>
-                      <td>docx</td>
-                      <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadTeatrDramat()"><i class="material-icons">download</i></button></td>
-                  </tr>
-                  <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Polski</td>
-                    <td>Antygona</td>
-                    <td>docx</td>
-                    <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadAntygona()"><i class="material-icons">download</i></button></td>
-                </tr>
-                <tr>
-                  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-                  <td>Horacy</td>
-                  <td>docx</td>
-                  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadHoracy()"><i class="material-icons">download</i></button></td>
-              </tr>
-              <tr>
-                <td class="mdl-data-table__cell--non-numeric">Polski</td>
-                <td>Iliada</td>
-                <td>docx</td>
-                <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadIlliada()"><i class="material-icons">download</i></button></td>
-            </tr>
-          <tr>
-            <td class="mdl-data-table__cell--non-numeric">Polski</td>
-            <td>Odyseja</td>
-            <td>docx</td>
-            <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadOdyseja()"><i class="material-icons">download</i></button></td>
-        </tr>
-        <tr>
-          <td class="mdl-data-table__cell--non-numeric">Polski</td>
-          <td>Średniowiecze</td>
-          <td>docx</td>
-          <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadSredniowiecze()"><i class="material-icons">download</i></button></td>
-      </tr>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Polski</td>
-        <td>Bogurodzica</td>
-        <td>docx</td>
-        <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadBogurodzica()"><i class="material-icons">download</i></button></td>
-    </tr>
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">Polski</td>
-      <td>Lament</td>
-      <td>docx</td>
-      <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadLament()"><i class="material-icons">download</i></button></td>
-  </tr>
-  <tr>
-    <td class="mdl-data-table__cell--non-numeric">Polski</td>
-    <td>Rozmowa Mistrza Polikarpa</td>
-    <td>docx</td>
-    <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadRozmowaMistrzaPolikarpa()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Święty Franciszek</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadSwietyFranciszek()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Pieśń o Rolandzie</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadRoland()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Dzieje Tristana i Izoldy</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadDzieje()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Cała notatka o średniowieczu</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadCaloscSredniowiecze()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Renesans</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadRenesans()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Treny Kochanowskiego</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadTreny()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Mądrości Matki z trenu XIX</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadTrenyMatka()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-<td class="mdl-data-table__cell--non-numeric">Polski</td>
-<td>Pieśni</td>
-<td>docx</td>
-<td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadPiesni()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-<td class="mdl-data-table__cell--non-numeric">Polski</td>
-<td>Czego chcesz od nas Panie</td>
-<td>docx</td>
-<td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadCzegoChceszPanie()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Odprwa Posłów Greckich</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadOdprawaPoslow()"><i class="material-icons">download</i></button></td>
-  </tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Żywot człowieka poczciwego</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadZywotCzlowieka()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Kazania Sejmowe</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadSkarga()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Barok</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadBarok()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Skąpiec</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadSkapiec()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Nurty poetyckie</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadNurtyPoetyckie()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Poezja Naborowskiego</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadNaborowski()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Profil psychologiczny Makbeta</td>
-  <td>PDF</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadProfilMakbet()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Krótkość żywota</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadKrotkoscZywota()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Potop</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadPotop()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Oświecenie</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadOswiecenie()"><i class="material-icons">download</i></button></td>
-</tr>
-<!-- <tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Apokalipsa</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadApokalipsa()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Apokalipsa</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadApokalipsa()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Apokalipsa</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadApokalipsa()"><i class="material-icons">download</i></button></td>
-</tr>
-<tr>
-  <td class="mdl-data-table__cell--non-numeric">Polski</td>
-  <td>Apokalipsa</td>
-  <td>docx</td>
-  <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-js-ripple-effect" onclick="downloadApokalipsa()"><i class="material-icons">download</i></button></td>
-</tr> -->
-          </tbody>
-              </table></div>
-              <!-- </div> -->
+        <div class="mdl-grid containerGridMax contentPading itemCenterAligment">
+          <!--ANTYK-->
+          <div class="mdl-cell mdl-cell--6-col contentPading itemCenterAligment">
+              <div class=" mdl-card mdl-shadow--4dp welcome-card" id="welcomeCard1">
+                  <div class="mdl-card__title"> 
+                      <h2 class="mdl-card__title-text" id="welcomeCard1TextTitle">Antyk</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text"  id="welcomeCard1text">
+                      Tutaj znajdziesz pliki z dotyczące antyku takie jak notatki, powatarzające się notatki i pewnie jeszcze trochę notatek...
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border"> 
+                      <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" onclick="goArchiwumPolskiAntyk()">Lecimy!</button>
+                  </div>
+              </div>
+          </div>
+          <!--SREDNIOWIECZE-->
+          <div class="mdl-cell mdl-cell--6-col contentPading itemCenterAligment">
+               <div class=" mdl-card mdl-shadow--4dp welcome-card" id="welcomeCard2">
+              <div class="mdl-card__title"> 
+                  <h2 class="mdl-card__title-text" id="welcomeCard2TextTitle">Średniowiecze</h2>
+              </div>
+              <div class="mdl-card__supporting-text" id="welcomeCard2text">
+                Tutaj znajdziesz pliki z dotyczące średniowiecza takie jak notatki, powatarzające się notatki i pewnie jeszcze trochę notatek...
+              </div>
+              <div class="mdl-card__actions mdl-card--border"> 
+                  <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" onclick="goArchiwumPolskiSredniowiecze()">Lecimy!</button>
+              </div>
+          </div>
+          </div>
+          <!--RENESANS-->
+          <div class="mdl-cell mdl-cell--6-col contentPading itemCenterAligment">
+            <div class=" mdl-card mdl-shadow--4dp welcome-card" id="welcomeCard2">
+           <div class="mdl-card__title"> 
+               <h2 class="mdl-card__title-text" id="welcomeCard2TextTitle">Renesans</h2>
+           </div>
+           <div class="mdl-card__supporting-text" id="welcomeCard2text">
+             Tutaj znajdziesz pliki z dotyczące renesansu takie jak notatki, powatarzające się notatki i pewnie jeszcze trochę notatek...
+           </div>
+           <div class="mdl-card__actions mdl-card--border"> 
+               <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" onclick="goArchiwumPolskiRenesans()">Lecimy!</button>
+           </div>
+          </div>
+          </div>
+          <!--BAROK-->
+          <div class="mdl-cell mdl-cell--6-col contentPading itemCenterAligment">
+            <div class=" mdl-card mdl-shadow--4dp welcome-card" id="welcomeCard2">
+           <div class="mdl-card__title"> 
+               <h2 class="mdl-card__title-text" id="welcomeCard2TextTitle">Barok</h2>
+           </div>
+           <div class="mdl-card__supporting-text" id="welcomeCard2text">
+             Tutaj znajdziesz pliki z dotyczące baroku takie jak notatki, powatarzające się notatki i pewnie jeszcze trochę notatek...
+           </div>
+           <div class="mdl-card__actions mdl-card--border"> 
+               <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" onclick="goArchiwumPolskiBarok()">Lecimy!</button>
+           </div>
+          </div>
+          </div>
+          <!--OSWIECNIE-->
+          <div class="mdl-cell mdl-cell--6-col contentPading itemCenterAligment">
+            <div class=" mdl-card mdl-shadow--4dp welcome-card" id="welcomeCard2">
+           <div class="mdl-card__title"> 
+               <h2 class="mdl-card__title-text" id="welcomeCard2TextTitle">Oświecenie</h2>
+           </div>
+           <div class="mdl-card__supporting-text" id="welcomeCard2text">
+             Tutaj znajdziesz pliki z dotyczące oświecenie takie jak notatki, powatarzające się notatki i pewnie jeszcze trochę notatek...
+           </div>
+           <div class="mdl-card__actions mdl-card--border"> 
+               <button class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" onclick="goArchiwumPolskiOswiecenie()">Lecimy!</button>
+           </div>
+          </div>
+          </div>
+        </div>
         <!-- footer mega-->
         <footer class="mdl-mega-footer" id="footer">
           <!-- top section-->
@@ -310,7 +140,7 @@
                       <li><a onclick="goPolish()" href="#">Polski</a></li>
                       <li><a onclick="goMath()" href="#">Matematyka</a></li>
                       <li><a onclick="alertAvast()" href="#" >Angielski</a></li>
-                      <li><a onclick="alertAvast()" href="#" >Chemia?</a></li>
+                      <li><a onclick="alertClassroom()" href="#" >Chemia?</a></li>
                   </ul>
               </div>
               <div class="mdl-mega-footer--drop-down-section">
@@ -348,296 +178,6 @@
           }
         });
       };
-      //code for downloading
-    //   function download() {
-    //     var fileName = "aha.txt";
-    //     var fileUrl = "files/aha.txt";
-    //     var a = document.createElement("a");
-    //     a.href = fileUrl;
-    //     a.setAttribute("download", fileName);
-    //     a.click();
-    // }
-    function downloadAntyk() {
-        var fileName = "Antyk.pdf";
-        var fileUrl = "files/Antyk.pdf";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadChmury() {
-        var fileName = "Chmury - informacje wstępne o utworze";
-        var fileUrl = "files/Chmury - informacje wstępne o utworze";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadLirykaAntyczna() {
-        var fileName = "BOGACTWO LIRYKI ANTYCZNEJ.docx";
-        var fileUrl = "files/BOGACTWO LIRYKI ANTYCZNEJ.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadTeatrDramat() {
-        var fileName = "Teatr i dramat w antyku.docx";
-        var fileUrl = "files/Teatr i dramat w antyku.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadAntygona() {
-        var fileName = "TEMAT ANTYGONA  BOHATERKA W DYLEMACIE TRAGICZNYM.docx";
-        var fileUrl = "files/TEMAT ANTYGONA  BOHATERKA W DYLEMACIE TRAGICZNYM.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadHoracy() {
-        var fileName = "Liryka_antyczna_Horacy_notatka.docx";
-        var fileUrl = "files/Liryka_antyczna_Horacy_notatka.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadIlliada() {
-        var fileName = "ILIADA KP.docx";
-        var fileUrl = "files/ILIADA KP.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadOdyseja() {
-        var fileName = "Iliada Odyseja.docx";
-        var fileUrl = "files/Iliada Odyseja.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadSredniowiecze() {
-        var fileName = "Średniowiecze - notatka wspólna.docx";
-        var fileUrl = "files/Średniowiecze - notatka wspólna.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadLament() {
-        var fileName = "LAMENT.docx";
-        var fileUrl = "files/LAMENT.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadRozmowaMistrzaPolikarpa() {
-        var fileName = "Rozmowa Mistrza POlikarpa.docx";
-        var fileUrl = "files/Rozmowa Mistrza POlikarpa.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadSwietyFranciszek() {
-        var fileName = "ŚWIĘTY FRANCISZEK KP.docx";
-        var fileUrl = "files/ŚWIĘTY FRANCISZEK KP.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadRoland() {
-        var fileName = "ROLAND.docx";
-        var fileUrl = "files/ROLAND.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadDzieje() {
-        var fileName = "DZIEJE TRISTANA I IZOLDY NOTATKA.docx";
-        var fileUrl = "files/DZIEJE TRISTANA I IZOLDY NOTATKA.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadCaloscSredniowiecze() {
-        var fileName = "średniowiecze-notatka-całość.docx";
-        var fileUrl = "files/średniowiecze-notatka-całość.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadRenesans() {
-        var fileName = "renesans.docx";
-        var fileUrl = "files/renesans.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadTreny() {
-        var fileName = "TRENY JANA KOCHANOWSKIEGO.docx";
-        var fileUrl = "files/TRENY JANA KOCHANOWSKIEGO.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadTrenyMatka() {
-        var fileName = "Mądrości Matki z treny XIX.docx";
-        var fileUrl = "files/Mądrości Matki z treny XIX.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadPiesni() {
-        var fileName = "Pieśni Kochanowskiego.docx";
-        var fileUrl = "files/Pieśni Kochanowskiego.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadCzegoChceszPanie() {
-        var fileName = "Czego chesz od nas Panie.docx";
-        var fileUrl = "files/Czego chesz od nas Panie.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadOdprawaPoslow() {
-        var fileName = "Pieśni Kochanowskiego.docx";
-        var fileUrl = "files/Pieśni Kochanowskiego.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadZywotCzlowieka() {
-        var fileName = "ŻYWOT CZŁOWIEKA POCZCIWEGO.docx";
-        var fileUrl = "files/ŻYWOT CZŁOWIEKA POCZCIWEGO.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadSkarga() {
-        var fileName = "Pieśni Kochanowskiego.docx";
-        var fileUrl = "files/Pieśni Kochanowskiego.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadBarok() {
-        var fileName = "barok wstęp do epoki.docx";
-        var fileUrl = "files/barok wstęp do epoki.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadSkapiec() {
-        var fileName = "SKĄPIEC .docx";
-        var fileUrl = "files/SKĄPIEC .docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadNurtyPoetyckie() {
-        var fileName = "Nurty poetyckie baroku, poezja metafizyczna.docx";
-        var fileUrl = "files/Nurty poetyckie baroku, poezja metafizyczna.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadNaborowski() {
-        var fileName = "barok wstęp do epoki.docx";
-        var fileUrl = "files/barok wstęp do epoki.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadProfilMakbet() {
-        var fileName = "Profil_psychologiczny_Makbet_Jakub_Kuliński.docx";
-        var fileUrl = "files/Profil_psychologiczny_Makbet_Jakub_Kuliński.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadKrotkoscZywota() {
-        var fileName = "NOTATKA NABOROWSKI MARNOŚĆ, KRÓTKOŚĆ ŻYWOTA.docx";
-        var fileUrl = "files/NOTATKA NABOROWSKI MARNOŚĆ, KRÓTKOŚĆ ŻYWOTA.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadPotop() {
-        var fileName = "Potop - geneza i charakter utworu.docx";
-        var fileUrl = "files/Potop - geneza i charakter utworu.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadOswiecenie() {
-        var fileName = "Oświecenie - wstęp do epoki.docx";
-        var fileUrl = "files/Oświecenie - wstęp do epoki.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    function downloadApokalipsa() {
-        var fileName = "Apokalipsa notatka.docx";
-        var fileUrl = "files/Apokalipsa notatka.docx";
-        var a = document.createElement("a");
-        a.href = fileUrl;
-        a.setAttribute("download", fileName);
-        a.click();
-    }
-    // function download() {
-    //     var fileName = "barok wstęp do epoki.docx";
-    //     var fileUrl = "files/barok wstęp do epoki.docx";
-    //     var a = document.createElement("a");
-    //     a.href = fileUrl;
-    //     a.setAttribute("download", fileName);
-    //     a.click();
-    // }
-    // function download() {
-    //     var fileName = "barok wstęp do epoki.docx";
-    //     var fileUrl = "files/barok wstęp do epoki.docx";
-    //     var a = document.createElement("a");
-    //     a.href = fileUrl;
-    //     a.setAttribute("download", fileName);
-    //     a.click();
-    // }
-    // function download() {
-    //     var fileName = "barok wstęp do epoki.docx";
-    //     var fileUrl = "files/barok wstęp do epoki.docx";
-    //     var a = document.createElement("a");
-    //     a.href = fileUrl;
-    //     a.setAttribute("download", fileName);
-    //     a.click();
-    // }
-
     </script>
     <noscript>This website rewures JavaScript to work as it should</noscript>
   </body>
